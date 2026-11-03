@@ -107,7 +107,7 @@ html[lang="ar"] .btn{font-style:normal}
 .tab{border:none;background:none;display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--faint);font-size:11px;font-weight:600;min-width:60px;min-height:48px;padding:2px 4px}
 .tab[aria-current="page"]{color:var(--accent)}
 .sets{display:flex;flex-direction:column}
-.setrow{display:grid;grid-template-columns:36px minmax(0,1fr) minmax(0,1fr) 48px;gap:10px;align-items:center;min-height:54px;border-top:1px solid var(--line)}
+.setrow{display:grid;grid-template-columns:30px 40px minmax(0,1fr) minmax(0,1fr) 46px;gap:10px;align-items:center;min-height:54px;border-top:1px solid var(--line)}
 .setrow.headr{min-height:30px;border-top:none;font-size:12px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:.4px}
 html[lang="ar"] .setrow.headr{text-transform:none;letter-spacing:0}
 .setin{height:42px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);text-align:center;font-weight:700;font-size:17px;width:100%;font-family:var(--font-en)}
@@ -228,7 +228,7 @@ en:{today:'Today',workout:'Workout',nutrition:'Nutrition',progress:'Progress',se
  plan:'Plan',planOrder:'Sessions run in a fixed order. Train on any day you like.',startNamed:'Start {s}',next:'Next',
  warmTitle:'Warm-up first',warmBody:'5–8 min of easy cardio, then 2 light sets of the first exercise before your working sets.',
  recent:'Recent sessions',none:'Nothing yet.',elapsed:'elapsed',end:'End',exOfN:'Exercise {x} of {y}',
- swap:'Swap exercise',formDemo:'Form demo',demoSoon:'Demo videos come in the next build.',lastTime:'Last session: {v}',firstTime:'First time on this exercise. Pick a weight you can lift for every rep with good form.',
+ swap:'Swap exercise',formDemo:'Form demo',demoSoon:'Demo videos come in the next build.',lastTime:'Last session: {v}',firstTime:'First time on this exercise. Pick a weight that leaves you 2–3 reps in reserve at the target. Too easy: add weight next set. Missed the target: lighten it. Your weights are saved for next time.',
  set:'Set',reps:'Reps',done:'Done',rest:'Rest',restDone:'Rest done. Next set when ready.',skip:'Skip',
  targetReps:'Target {a}–{b} reps',increaseQ:'You hit the top of the rep range on every set. Increase the weight next session?',
  yes:'Yes',notYet:'Not yet',increasePlanned:'You planned to add weight on this exercise today.',
@@ -256,7 +256,7 @@ en:{today:'Today',workout:'Workout',nutrition:'Nutrition',progress:'Progress',se
  tierTitle:'Plan (test, no payment)',free:'Free',ai:'AI Assistant',coach:'Personal Coaching',
  ramadan:'Ramadan mode',ramadanNote:'Meals switch to Iftar and Suhoor.',paidOnly:'AI Assistant and Personal Coaching',
  trainingPlan:'Training plan',goalProfile:'Goal and body details',edit:'Edit',reset:'Erase all data',resetQ:'Erase everything on this phone? This cannot be undone.',erase:'Erase',cancel:'Cancel',
- pilot:'Pilot version 0.2 · data stays in this browser on this phone.',
+ pilot:'Pilot version 0.3 · data stays in this browser on this phone.',
  welcome:'Train with momentum.',welcomeSub:'Workouts, cardio and nutrition in one simple app.',getStarted:'Get started',tryDemo:'Explore with sample data',
  aboutYou:'About you',sex:'Sex',male:'Male',female:'Female',age:'Age',height:'Height (cm)',bodyWeight:'Weight (kg)',yourName:'First name',
  activity:'Daily activity',act1:'Mostly sitting',act1d:'Desk work, little walking',act2:'Lightly active',act2d:'Some walking during the day',act3:'Active',act3d:'On your feet most of the day',act4:'Very active',act4d:'Physical job or sport most days',
@@ -267,7 +267,7 @@ en:{today:'Today',workout:'Workout',nutrition:'Nutrition',progress:'Progress',se
  yourTargets:'Your daily targets',maintenanceLine:'Maintenance about {n} kcal',startTraining:'Start training',
  back:'Back',continue:'Continue',tooYoung:'Momentiq is for ages 13 and up.',teenNote:'Under 18 you get general training and nutrition at maintenance calories, without deficit plans or subscriptions.',
  needFields:'Fill in every field to continue.',delete:'Delete',raw:'raw',cooked:'cooked',dry:'dry',ready:'prepared',fresh:'fresh',approx:'approx.',
- g:'g',kg:'kg',cm:'cm',kcal:'kcal',min:'min',demoOn:'You are looking at sample data.',startOwn:'Start my own',voiceCoach:'Voice coach',voiceOn:'Listening · say “Done” after a set, “Skip” to skip rest, “Next” for the next exercise.',voiceOff:'Turn on to hear cues and control sets with your voice. Works with Bluetooth earphones while the app stays open.',voiceNoSR:'Voice commands are not supported in this browser. Spoken cues still work.',voiceDenied:'Microphone access was refused. Allow it for Safari in iPhone Settings, then try again.',voicePaid:'Voice coach is part of AI Assistant and Personal Coaching.',sayRest:'Rest {n} seconds.',sayRestDone:'Rest over. Set {s}. {kg} kilos. {r} reps.',sayEx:'{e}. {n} sets of {a} to {b} reps.',sayDone:'Set done.',sayCardio:'Lifting done. Time for cardio.',heard:'Heard: {x}'},
+ g:'g',kg:'kg',cm:'cm',kcal:'kcal',min:'min',demoOn:'You are looking at sample data.',goal2:'Goal',partner:'Partner: {x}',startNow:'Start this session now',makeNext:'Make it my next session',pickNote:'After it, the plan continues in order from this session.',compareTiers:'Compare plans',compare:'Compare',soon:'Soon',soonNote:'“Soon” features arrive with the AI service and the coach dashboard.',monthLib:'This month’s plans. The library rotates every month, and your current plan stays.',tf1:'Calories and macros for your goal',tf2:'Ready workout plans and meal tables',tf3:'Log weights, reps and history',tf4:'Rest timer and warm-up',tf5:'Weight, waist and steps log',tf6:'Plan library',tf7:'Charts and analysis',tf8:'Weekly calorie check',tf9:'Ramadan mode',tf10:'Voice coach with earphones',tf11:'Read nutrition screenshots',tf12:'Photograph gym machines for a plan',tf13:'Personal plan and weekly review',tf14:'Message your coach',mealPlanTitle:'Daily meal plan',closestBand:'Closest table to your target of {n} kcal.',mealsPerDay:'Meals per day',logMealBtn:'Log',planTotals:'Plan: P {p} · C {c} · F {f} g',yourTarget:'Your target:',stepsToday:'Steps today',stepsPh:'Enter steps',startOwn:'Start my own',voiceCoach:'Voice coach',voiceOn:'Listening · say “Done” after a set, “Skip” to skip rest, “Next” for the next exercise.',voiceOff:'Turn on to hear cues and control sets with your voice. Works with Bluetooth earphones while the app stays open.',voiceNoSR:'Voice commands are not supported in this browser. Spoken cues still work.',voiceDenied:'Microphone access was refused. Allow it for Safari in iPhone Settings, then try again.',voicePaid:'Voice coach is part of AI Assistant and Personal Coaching.',sayRest:'Rest {n} seconds.',sayRestDone:'Rest over. Set {s}. {kg} kilos. {r} reps.',sayEx:'{e}. {n} sets: {a} reps.',sayDone:'Set done.',sayCardio:'Lifting done. Time for cardio.',heard:'Heard: {x}'},
 ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progress:'التقدّم',settings:'الإعدادات',
  nextSession:'الحصة التالية',sessionXofY:'الحصة {x} من {y}',nEx:'{n} تمارين',approxMin:'~{n} دقيقة',cardioChip:'+ 20–30 دقيقة كارديو',
  start:'ابدأ التمرين',resume:'أكمل التمرين',inProgress:'حصة جارية',kcalLeft:'سعرة متبقية',kcalOver:'سعرة زيادة',
@@ -278,7 +278,7 @@ ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progr
  plan:'الخطة',planOrder:'ترتيب الحصص ثابت، وتقدر تتمرّن في أي يوم يناسبك.',startNamed:'ابدأ {s}',next:'التالية',
  warmTitle:'الإحماء أولاً',warmBody:'٥–٨ دقائق كارديو خفيف، ثم مجموعتان خفيفتان من أول تمرين قبل المجموعات الأساسية.',
  recent:'آخر الحصص',none:'لا يوجد شيء بعد.',elapsed:'منقضية',end:'إنهاء',exOfN:'التمرين {x} من {y}',
- swap:'تبديل التمرين',formDemo:'شرح الأداء',demoSoon:'مقاطع الشرح تجي في النسخة القادمة.',lastTime:'آخر حصة: {v}',firstTime:'أول مرة على هذا التمرين. اختر وزناً تقدر ترفعه في كل تكرار بأداء صحيح.',
+ swap:'تبديل التمرين',formDemo:'شرح الأداء',demoSoon:'مقاطع الشرح تجي في النسخة القادمة.',lastTime:'آخر حصة: {v}',firstTime:'أول مرة على هذا التمرين. اختر وزناً يبقي عندك 2–3 تكرارات بالمخزن عند الهدف. إذا كان سهل زِده في المجموعة الجاية، وإذا ما وصلت الهدف خففه. أوزانك تنحفظ للمرة الجاية.',
  set:'مجموعة',reps:'تكرار',done:'تم',rest:'راحة',restDone:'انتهت الراحة. ابدأ المجموعة التالية متى ما كنت جاهزاً.',skip:'تخطي',
  targetReps:'الهدف {a}–{b} تكرار',increaseQ:'ختمت أعلى عدد تكرارات في كل المجموعات. تبي تزيد الوزن الحصة الجاية؟',
  yes:'نعم',notYet:'ليس بعد',increasePlanned:'كنت ناوي تزيد الوزن على هذا التمرين اليوم.',
@@ -306,7 +306,7 @@ ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progr
  tierTitle:'الباقة (تجربة بدون دفع)',free:'المجاني',ai:'المساعد الذكي',coach:'التدريب الشخصي',
  ramadan:'وضع رمضان',ramadanNote:'الوجبات تتحول لإفطار وسحور.',paidOnly:'المساعد الذكي والتدريب الشخصي',
  trainingPlan:'خطة التمرين',goalProfile:'الهدف وبيانات الجسم',edit:'تعديل',reset:'حذف كل البيانات',resetQ:'تحذف كل شي على هذا الجوال؟ ما تقدر ترجعه.',erase:'احذف',cancel:'إلغاء',
- pilot:'النسخة التجريبية 0.2 · البيانات محفوظة في هذا المتصفح على جوالك.',
+ pilot:'النسخة التجريبية 0.3 · البيانات محفوظة في هذا المتصفح على جوالك.',
  welcome:'تمرّن بزخم.',welcomeSub:'التمارين والكارديو والتغذية في تطبيق واحد بسيط.',getStarted:'ابدأ',tryDemo:'جرّب ببيانات مثال',
  aboutYou:'عنك',sex:'الجنس',male:'ذكر',female:'أنثى',age:'العمر',height:'الطول (سم)',bodyWeight:'الوزن (كجم)',yourName:'الاسم الأول',
  activity:'نشاطك اليومي',act1:'جلوس أغلب الوقت',act1d:'عمل مكتبي ومشي قليل',act2:'نشاط خفيف',act2d:'بعض المشي خلال اليوم',act3:'نشيط',act3d:'واقف أغلب اليوم',act4:'نشيط جداً',act4d:'عمل بدني أو رياضة أغلب الأيام',
@@ -317,7 +317,7 @@ ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progr
  yourTargets:'احتياجك اليومي',maintenanceLine:'سعرات الثبات تقريباً {n}',startTraining:'ابدأ التمرين',
  back:'رجوع',continue:'متابعة',tooYoung:'Momentiq متاح من عمر 13 سنة وفوق.',teenNote:'تحت 18 سنة تحصل على تمارين وتغذية عامة بسعرات الثبات، بدون خطط عجز أو اشتراكات.',
  needFields:'عبّئ كل الخانات عشان تكمل.',delete:'حذف',raw:'نيء',cooked:'مطبوخ',dry:'جاف',ready:'جاهز',fresh:'طازج',approx:'تقريبي',
- g:'جم',kg:'كجم',cm:'سم',kcal:'سعرة',min:'دقيقة',demoOn:'أنت تشوف بيانات مثال.',startOwn:'ابدأ بياناتي',voiceCoach:'المدرب الصوتي',voiceOn:'يسمعك الحين · قل «خلصت» بعد المجموعة، و«تخطي» للراحة، و«التالي» للتمرين اللي بعده.',voiceOff:'شغّله عشان تسمع التنبيهات وتتحكم بالمجموعات بصوتك. يشتغل مع سماعات البلوتوث ما دام التطبيق مفتوح.',voiceNoSR:'الأوامر الصوتية غير مدعومة في هذا المتصفح، لكن التنبيهات الصوتية تشتغل.',voiceDenied:'تم رفض الوصول للمايكروفون. فعّله لـ Safari من إعدادات الآيفون وجرّب مرة ثانية.',voicePaid:'المدرب الصوتي من مزايا المساعد الذكي والتدريب الشخصي.',sayRest:'راحة {n} ثانية.',sayRestDone:'انتهت الراحة. المجموعة {s}. {kg} كيلو. {r} تكرار.',sayEx:'{e}. {n} مجموعات من {a} إلى {b} تكرار.',sayDone:'تمت المجموعة.',sayCardio:'خلص الحديد. وقت الكارديو.',heard:'سمعت: {x}'}
+ g:'جم',kg:'كجم',cm:'سم',kcal:'سعرة',min:'دقيقة',demoOn:'أنت تشوف بيانات مثال.',goal2:'الهدف',partner:'الشريك: {x}',startNow:'ابدأ هذي الحصة الحين',makeNext:'خلّها حصتي التالية',pickNote:'بعدها تكمل الخطة بالترتيب من هذي الحصة.',compareTiers:'مقارنة الباقات',compare:'مقارنة',soon:'قريباً',soonNote:'المزايا «قريباً» تجي مع خدمة الذكاء الاصطناعي ولوحة المدرب.',monthLib:'خطط هذا الشهر. المكتبة تتبدل كل شهر، وخطتك الحالية تبقى.',tf1:'السعرات والماكروز حسب هدفك',tf2:'خطط تمرين وجداول تغذية جاهزة',tf3:'تسجيل الأوزان والتكرارات والسجل',tf4:'مؤقت الراحة والإحماء',tf5:'سجل الوزن والخصر والخطوات',tf6:'مكتبة الخطط',tf7:'الرسوم البيانية والتحليل',tf8:'مراجعة السعرات الأسبوعية',tf9:'وضع رمضان',tf10:'المدرب الصوتي بالسماعات',tf11:'قراءة لقطات شاشة التغذية',tf12:'تصوير أجهزة الجيم لبناء خطة',tf13:'خطة مخصصة ومراجعة أسبوعية',tf14:'مراسلة المدرب',mealPlanTitle:'جدول الوجبات اليومي',closestBand:'أقرب جدول لهدفك {n} سعرة.',mealsPerDay:'عدد الوجبات',logMealBtn:'سجّل',planTotals:'الجدول: بروتين {p} · كارب {c} · دهون {f} جم',yourTarget:'هدفك:',stepsToday:'خطوات اليوم',stepsPh:'أدخل الخطوات',startOwn:'ابدأ بياناتي',voiceCoach:'المدرب الصوتي',voiceOn:'يسمعك الحين · قل «خلصت» بعد المجموعة، و«تخطي» للراحة، و«التالي» للتمرين اللي بعده.',voiceOff:'شغّله عشان تسمع التنبيهات وتتحكم بالمجموعات بصوتك. يشتغل مع سماعات البلوتوث ما دام التطبيق مفتوح.',voiceNoSR:'الأوامر الصوتية غير مدعومة في هذا المتصفح، لكن التنبيهات الصوتية تشتغل.',voiceDenied:'تم رفض الوصول للمايكروفون. فعّله لـ Safari من إعدادات الآيفون وجرّب مرة ثانية.',voicePaid:'المدرب الصوتي من مزايا المساعد الذكي والتدريب الشخصي.',sayRest:'راحة {n} ثانية.',sayRestDone:'انتهت الراحة. المجموعة {s}. {kg} كيلو. {r} تكرار.',sayEx:'{e}. {n} مجموعات: {a} تكرار.',sayDone:'تمت المجموعة.',sayCardio:'خلص الحديد. وقت الكارديو.',heard:'سمعت: {x}'}
 };
 
 /* ---------- Data ---------- */
@@ -357,23 +357,55 @@ var EX={
  calf:{en:'Standing Calf Raise',ar:'سمانة واقف',rest:60,alts:['seatedCalf']},
  seatedCalf:{en:'Seated Calf Raise',ar:'سمانة جالس',rest:60,alts:['calf']}
 };
+function PI(ex,reps,m,o){var r={ex:ex,reps:reps,m:m||'straight'};if(o)for(var k in o)r[k]=o[k];return r;}
 function S(key,en,ar,fen,far,items){return {key:key,name:{en:en,ar:ar},focus:{en:fen,ar:far},items:items};}
+var T3=[10,10,10],T3L=[12,12,12],PY3=[12,10,8],PY4=[12,10,8,6],RV3=[6,8,10],F5=[5,5,5,5,5],MYO=[15,5,5,5];
 var PLANS={
- ul:{name:{en:'Upper / Lower',ar:'علوي / سفلي'},desc:{en:'4 sessions · good for beginners',ar:'4 حصص · مناسبة للمبتدئين'},sessions:[
-  S('upA','Upper A','علوي أ','Chest · Back · Shoulders · Arms','صدر · ظهر · أكتاف · ذراع',[['bench',3,6,8],['row',3,8,10],['dbShoulder',3,8,10],['latPull',3,8,10],['curl',2,10,12],['tricepPush',2,10,12]]),
-  S('loA','Lower A','سفلي أ','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[['squat',3,6,8],['rdl',3,8,10],['legPress',3,10,12],['legCurl',3,10,12],['calf',3,12,15]]),
-  S('upB','Upper B','علوي ب','Chest · Back · Shoulders · Arms','صدر · ظهر · أكتاف · ذراع',[['inclineDb',3,8,10],['cableRow',3,10,12],['latRaise',3,12,15],['pullup',3,6,10],['hammer',2,10,12],['skull',2,10,12]]),
-  S('loB','Lower B','سفلي ب','Hamstrings · Quads · Calves','خلفية · أمامية · سمانة',[['hackSquat',3,8,10],['dbRdl',3,10,12],['lunge',2,10,12],['seatedCurl',3,10,12],['seatedCalf',3,12,15]])]},
- ppl:{name:{en:'Push / Pull / Legs',ar:'دفع / سحب / أرجل'},desc:{en:'3 sessions on repeat · intermediate',ar:'3 حصص متكررة · متوسط'},sessions:[
-  S('push','Push Day','يوم الدفع','Chest · Shoulders · Triceps','صدر · أكتاف · ترايسبس',[['bench',4,6,8],['inclineDb',3,8,10],['ohp',3,8,10],['latRaise',3,12,15],['tricepPush',3,10,12],['chestFly',2,12,15]]),
-  S('pull','Pull Day','يوم السحب','Back · Rear delts · Biceps','ظهر · كتف خلفي · بايسبس',[['latPull',4,8,10],['row',3,8,10],['cableRow',3,10,12],['facePull',3,12,15],['curl',3,10,12],['hammer',2,10,12]]),
-  S('legs','Leg Day','يوم الأرجل','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[['squat',4,6,8],['rdl',3,8,10],['legPress',3,10,12],['legCurl',3,10,12],['calf',4,12,15],['lunge',2,10,12]])]},
- split:{name:{en:'Body-part split',ar:'تقسيم العضلات'},desc:{en:'5 sessions · advanced',ar:'5 حصص · متقدم'},sessions:[
-  S('chest','Chest','صدر','Chest · Triceps','صدر · ترايسبس',[['bench',4,6,8],['inclineDb',3,8,10],['machinePress',3,10,12],['chestFly',3,12,15],['tricepPush',3,10,12]]),
-  S('back','Back','ظهر','Lats · Mid back','ظهر علوي ووسط',[['pullup',4,6,10],['row',4,8,10],['cableRow',3,10,12],['dbRow',3,10,12],['facePull',3,12,15]]),
-  S('legs5','Legs','أرجل','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[['squat',4,6,8],['rdl',3,8,10],['legPress',3,10,12],['legExt',3,12,15],['legCurl',3,10,12],['calf',4,12,15]]),
-  S('shoulders','Shoulders','أكتاف','Front · Side · Rear delts','أمامي · جانبي · خلفي',[['ohp',4,6,8],['dbShoulder',3,8,10],['latRaise',4,12,15],['cableLat',3,12,15],['rearDelt',3,12,15]]),
-  S('arms','Arms','ذراع','Biceps · Triceps','بايسبس · ترايسبس',[['barCurl',3,8,10],['skull',3,8,10],['curl',3,10,12],['tricepPush',3,10,12],['hammer',3,10,12]])]}
+ fb:{name:{en:'Full Body',ar:'فل بدي'},desc:{en:'3 sessions · beginner',ar:'3 حصص · مبتدئ'},level:'beginner',sessions:[
+  S('fbA','Full Body A','فل بدي أ','Legs · Chest · Back · Arms','أرجل · صدر · ظهر · ذراع',[PI('squat',T3),PI('bench',T3),PI('row',T3),PI('latRaise',T3L),PI('curl',T3L)]),
+  S('fbB','Full Body B','فل بدي ب','Hamstrings · Shoulders · Back · Legs','خلفية · أكتاف · ظهر · أرجل',[PI('rdl',T3),PI('ohp',T3),PI('latPull',T3),PI('legPress',T3L),PI('tricepPush',T3L)]),
+  S('fbC','Full Body C','فل بدي ج','Quads · Chest · Back · Calves','أمامية · صدر · ظهر · سمانة',[PI('hackSquat',T3),PI('inclineDb',T3),PI('cableRow',T3),PI('legCurl',T3L),PI('calf',[15,15,15])])]},
+ ul:{name:{en:'Upper / Lower',ar:'علوي / سفلي'},desc:{en:'4 sessions · beginner to intermediate',ar:'4 حصص · مبتدئ إلى متوسط'},level:'beginner',sessions:[
+  S('upA','Upper A','علوي أ','Chest · Back · Shoulders · Arms','صدر · ظهر · أكتاف · ذراع',[PI('bench',PY3,'pyramid'),PI('row',PY3,'pyramid'),PI('dbShoulder',T3),PI('latPull',T3),PI('curl',T3L,'superset',{ss:'A'}),PI('tricepPush',T3L,'superset',{ss:'A'})]),
+  S('loA','Lower A','سفلي أ','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[PI('squat',PY3,'pyramid'),PI('rdl',T3),PI('legPress',T3L),PI('legCurl',T3L),PI('calf',[15,15,15])]),
+  S('upB','Upper B','علوي ب','Chest · Back · Shoulders · Arms','صدر · ظهر · أكتاف · ذراع',[PI('inclineDb',PY3,'pyramid'),PI('cableRow',T3),PI('pullup',[8,8,8]),PI('latRaise',[15,15,15]),PI('hammer',T3L,'superset',{ss:'A'}),PI('skull',T3L,'superset',{ss:'A'})]),
+  S('loB','Lower B','سفلي ب','Hamstrings · Quads · Calves','خلفية · أمامية · سمانة',[PI('hackSquat',PY3,'pyramid'),PI('dbRdl',T3),PI('lunge',[10,10]),PI('seatedCurl',T3L),PI('seatedCalf',[15,15,15])])]},
+ ppl:{name:{en:'Push / Pull / Legs',ar:'دفع / سحب / أرجل'},desc:{en:'3 sessions on repeat · intermediate',ar:'3 حصص متكررة · متوسط'},level:'intermediate',sessions:[
+  S('push','Push Day','يوم الدفع','Chest · Shoulders · Triceps','صدر · أكتاف · ترايسبس',[PI('bench',PY4,'pyramid'),PI('inclineDb',PY3,'pyramid'),PI('ohp',T3),PI('latRaise',[15,15,15]),PI('tricepPush',T3L,'drop'),PI('chestFly',[15,15])]),
+  S('pull','Pull Day','يوم السحب','Back · Rear delts · Biceps','ظهر · كتف خلفي · بايسبس',[PI('latPull',PY4,'pyramid'),PI('row',PY3,'pyramid'),PI('cableRow',T3L),PI('facePull',[15,15,15]),PI('curl',T3L,'superset',{ss:'A'}),PI('hammer',T3L,'superset',{ss:'A'})]),
+  S('legs','Leg Day','يوم الأرجل','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[PI('squat',PY4,'pyramid'),PI('rdl',PY3,'pyramid'),PI('legPress',T3L),PI('legCurl',T3L,'drop'),PI('calf',[15,15,15,15]),PI('lunge',[10,10])])]},
+ phul:{name:{en:'Power / Hypertrophy (PHUL)',ar:'قوة / ضخامة (PHUL)'},desc:{en:'4 sessions · intermediate',ar:'4 حصص · متوسط'},level:'intermediate',sessions:[
+  S('upP','Upper Power','علوي قوة','Heavy 5×5 · Chest · Back','5×5 ثقيل · صدر · ظهر',[PI('bench',F5,'5x5'),PI('row',F5,'5x5'),PI('ohp',[6,6,6]),PI('latPull',[8,8,8]),PI('barCurl',[8,8]),PI('skull',[8,8])]),
+  S('loP','Lower Power','سفلي قوة','Heavy 5×5 · Legs','5×5 ثقيل · أرجل',[PI('squat',F5,'5x5'),PI('rdl',[6,6,6]),PI('legPress',[8,8,8]),PI('legCurl',[8,8]),PI('calf',[10,10,10])]),
+  S('upH','Upper Hypertrophy','علوي ضخامة','Chest · Back · Shoulders · Arms','صدر · ظهر · أكتاف · ذراع',[PI('inclineDb',T3L),PI('cableRow',T3L),PI('dbShoulder',T3L),PI('latRaise',MYO,'myo',{rest:20}),PI('chestFly',T3L,'superset',{ss:'A'}),PI('rearDelt',T3L,'superset',{ss:'A'}),PI('curl',T3L,'superset',{ss:'B'}),PI('tricepPush',T3L,'superset',{ss:'B'})]),
+  S('loH','Lower Hypertrophy','سفلي ضخامة','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[PI('hackSquat',T3L),PI('dbRdl',T3L),PI('lunge',[12,12]),PI('legExt',[15,15,15],'drop'),PI('seatedCurl',[15,15,15]),PI('seatedCalf',MYO,'myo',{rest:20})])]},
+ express:{name:{en:'Express Supersets',ar:'سوبر سِت سريع'},desc:{en:'3 sessions · about 40 min · all levels',ar:'3 حصص · حوالي 40 دقيقة · كل المستويات'},level:'all',sessions:[
+  S('exA','Express A','سريع أ','Chest + Back · Shoulders + Lats · Arms','صدر + ظهر · أكتاف + ظهر · ذراع',[PI('bench',T3,'superset',{ss:'A'}),PI('row',T3,'superset',{ss:'A'}),PI('dbShoulder',T3,'superset',{ss:'B'}),PI('latPull',T3,'superset',{ss:'B'}),PI('curl',T3L,'superset',{ss:'C'}),PI('tricepPush',T3L,'superset',{ss:'C'})]),
+  S('exB','Express B','سريع ب','Squat + Hamstrings · Hinge + Quads · Calves','سكوات + خلفية · رومانية + أمامية · سمانة',[PI('squat',T3,'superset',{ss:'A'}),PI('legCurl',T3L,'superset',{ss:'A'}),PI('rdl',T3,'superset',{ss:'B'}),PI('legExt',T3L,'superset',{ss:'B'}),PI('calf',[15,15,15])]),
+  S('exC','Express C','سريع ج','Incline + Row · Legs + Rear delts · Arms','مائل + تجديف · أرجل + كتف خلفي · ذراع',[PI('inclineDb',T3,'superset',{ss:'A'}),PI('cableRow',T3,'superset',{ss:'A'}),PI('legPress',T3L,'superset',{ss:'B'}),PI('facePull',[15,15,15],'superset',{ss:'B'}),PI('hammer',T3L,'superset',{ss:'C'}),PI('skull',T3L,'superset',{ss:'C'})])]},
+ split:{name:{en:'Body-part split',ar:'تقسيم العضلات'},desc:{en:'5 sessions · advanced',ar:'5 حصص · متقدم'},level:'advanced',sessions:[
+  S('chest','Chest','صدر','Chest · Triceps','صدر · ترايسبس',[PI('bench',RV3.concat([10]),'reverse'),PI('inclineDb',PY3,'pyramid'),PI('machinePress',T3L),PI('chestFly',[15,15,15],'drop'),PI('tricepPush',T3L)]),
+  S('back','Back','ظهر','Lats · Mid back','ظهر علوي ووسط',[PI('pullup',[8,8,8,8]),PI('row',RV3.concat([10]),'reverse'),PI('cableRow',T3L),PI('dbRow',T3L),PI('facePull',[15,15,15])]),
+  S('legs5','Legs','أرجل','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[PI('squat',RV3.concat([10]),'reverse'),PI('rdl',PY3,'pyramid'),PI('legPress',T3L),PI('legExt',[15,15,15],'drop'),PI('legCurl',T3L),PI('calf',[15,15,15,15])]),
+  S('shoulders','Shoulders','أكتاف','Front · Side · Rear delts','أمامي · جانبي · خلفي',[PI('ohp',RV3.concat([10]),'reverse'),PI('dbShoulder',T3),PI('latRaise',MYO,'myo',{rest:20}),PI('cableLat',[15,15,15]),PI('rearDelt',[15,15,15])]),
+  S('arms','Arms','ذراع','Biceps · Triceps','بايسبس · ترايسبس',[PI('barCurl',PY3,'pyramid',{ss:'A',m:'superset'}),PI('skull',PY3,'superset',{ss:'A'}),PI('curl',T3L,'superset',{ss:'B'}),PI('tricepPush',T3L,'superset',{ss:'B'}),PI('hammer',T3L,'drop')])]},
+ arnold:{name:{en:'Arnold Split',ar:'تقسيم أرنولد'},desc:{en:'6 sessions · advanced',ar:'6 حصص · متقدم'},level:'advanced',sessions:[
+  S('cb1','Chest + Back','صدر + ظهر','Chest · Back','صدر · ظهر',[PI('bench',PY4,'pyramid'),PI('pullup',[8,8,8]),PI('inclineDb',PY3,'pyramid'),PI('row',PY3,'pyramid'),PI('chestFly',T3L,'superset',{ss:'A'}),PI('dbRow',T3L,'superset',{ss:'A'})]),
+  S('sa1','Shoulders + Arms','أكتاف + ذراع','Shoulders · Biceps · Triceps','أكتاف · بايسبس · ترايسبس',[PI('ohp',PY4,'pyramid'),PI('latRaise',MYO,'myo',{rest:20}),PI('rearDelt',[15,15,15]),PI('barCurl',T3,'superset',{ss:'A'}),PI('skull',T3,'superset',{ss:'A'}),PI('hammer',T3L,'superset',{ss:'B'}),PI('tricepPush',T3L,'superset',{ss:'B'})]),
+  S('lg1','Legs','أرجل','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[PI('squat',PY4,'pyramid'),PI('rdl',PY3,'pyramid'),PI('legPress',T3L),PI('legExt',[15,15,15],'drop'),PI('legCurl',T3L),PI('calf',MYO,'myo',{rest:20})]),
+  S('cb2','Chest + Back 2','صدر + ظهر 2','Chest · Back','صدر · ظهر',[PI('dbBench',PY3,'pyramid'),PI('latPull',PY3,'pyramid'),PI('inclineBar',T3),PI('cableRow',T3),PI('pecDeck',[15,15,15],'drop'),PI('facePull',[15,15,15])]),
+  S('sa2','Shoulders + Arms 2','أكتاف + ذراع 2','Shoulders · Biceps · Triceps','أكتاف · بايسبس · ترايسبس',[PI('dbShoulder',PY3,'pyramid'),PI('cableLat',[15,15,15]),PI('facePull',[15,15,15]),PI('curl',T3L,'superset',{ss:'A'}),PI('tricepPush',T3L,'superset',{ss:'A'}),PI('hammer',T3L,'drop')]),
+  S('lg2','Legs 2','أرجل 2','Quads · Hamstrings · Calves','أمامية · خلفية · سمانة',[PI('hackSquat',PY3,'pyramid'),PI('dbRdl',T3),PI('lunge',[12,12]),PI('seatedCurl',T3L),PI('seatedCalf',[15,15,15,15])])]}
+};
+var PLAN_ORDER=['fb','ul','ppl','phul','express','split','arnold'];
+var METHODS={
+ straight:{en:'Straight sets',ar:'مجموعات ثابتة',tipEn:'Same weight and target on every set.',tipAr:'نفس الوزن والهدف في كل مجموعة.'},
+ pyramid:{en:'Pyramid',ar:'هرمي',tipEn:'Add weight each set as the reps drop.',tipAr:'زِد الوزن مع كل مجموعة والتكرارات تنزل.'},
+ reverse:{en:'Reverse pyramid',ar:'هرمي عكسي',tipEn:'Heaviest set first, then lighten as the reps rise.',tipAr:'أثقل مجموعة أولاً، ثم خفف الوزن والتكرارات تزيد.'},
+ superset:{en:'Superset',ar:'سوبر سِت',tipEn:'Alternate with its partner, rest after both.',tipAr:'بدّل مع التمرين الشريك، والراحة بعد الاثنين.'},
+ drop:{en:'Drop set',ar:'دروب سِت',tipEn:'On the last set, drop the weight 20–30% and keep going.',tipAr:'في آخر مجموعة نزّل الوزن 20–30% وكمل.'},
+ myo:{en:'Myo-reps',ar:'مايو-ريبس',tipEn:'One activation set, then short mini-sets with about 5 breaths of rest.',tipAr:'مجموعة تنشيط، ثم مجموعات قصيرة براحة حوالي 5 أنفاس.'},
+ '5x5':{en:'5×5 strength',ar:'5×5 قوة',tipEn:'Heavy weight, same load on all 5 sets.',tipAr:'وزن ثقيل، نفس الوزن في الخمس مجموعات.'}
 };
 // per 100 g: kcal, protein, carbs, fat; st = state tag; srv = serving hint grams
 var FOODS=[
@@ -455,7 +487,7 @@ function vToday(){var tg=targets(),tot=totals(),ns=nextSess(),p=plan(),h='';
  h+='<div class="head"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">'+esc(longDate(new Date()))+'</span><h1>'+t('today')+'</h1></div></div>';
  if(st.active){var s=findSess(st.active.planId,st.active.sessionKey);
   h+='<div class="hero"><div class="deco">'+dumbbellSvg(170)+'</div><div class="between"><span class="heye">'+t('inProgress').toUpperCase()+'</span><span class="pill num" style="background:rgba(0,18,43,.35);color:#fff" data-tick="elapsed">'+dur(Date.now()-st.active.startedAt)+'</span></div><div class="htitle">'+esc(L(s.name))+'</div><button class="btn pulse" data-act="route" data-v="workout">'+ic('play',18)+t('resume')+'</button></div>';}
- else{var est=Math.min(60,Math.max(45,ns.items.length*9));
+ else{var est=sessMin(ns);
   h+='<div class="hero"><div class="deco">'+dumbbellSvg(170)+'</div><span class="heye">'+t('nextSession').toUpperCase()+' · '+((st.nextIndex%p.sessions.length)+1)+'/'+p.sessions.length+'</span>'+
   '<div class="htitle">'+esc(L(ns.name))+'</div><span class="hsub">'+esc(L(ns.focus))+'</span>'+
   '<div class="chips"><span class="chip">'+t('nEx',{n:ns.items.length})+'</span><span class="chip">'+t('approxMin',{n:est})+'</span><span class="chip">'+t('cardioChip')+'</span></div>'+
@@ -465,6 +497,8 @@ function vToday(){var tg=targets(),tot=totals(),ns=nextSess(),p=plan(),h='';
  var wk=weekStart(dkey()),nW=st.history.filter(function(x){return weekStart(x.date)===wk;}).length;
  h+='<div class="grid2"><div class="tile sp"><span class="small muted">'+t('weightAvg')+'</span>'+(cur?'<span class="bigi num">'+fmt(cur.avg,1)+' <span class="small muted" style="font-weight:600">'+t('kg')+'</span></span>'+(prev?'<span class="small accent" style="font-weight:600">'+t('vsLast',{v:(cur.avg-prev.avg>0?'+':'')+fmt(cur.avg-prev.avg,1)})+'</span>':''):'<span class="small faint">'+t('noWeight')+'</span>')+'</div>'+
   '<div class="tile sp"><span class="small muted">'+t('sessionsWeek')+'</span><span class="bigi num">'+nW+(nW>0?' 🔥':'')+'</span><span class="small muted">'+t('goalN',{n:p.sessions.length})+'</span></div></div>';
+ var stp=(st.steps||{})[dkey()];
+ h+='<div class="tile sp"><div class="between"><span class="small muted">'+t('stepsToday')+'</span><span class="small muted num">'+t('goalN',{n:'8,000'})+'</span></div><span class="bigi num">'+(stp!=null?fmt(stp):'–')+'</span>'+bar(stp?stp/80:0)+'<div class="row" style="margin-top:6px"><label class="vh" for="stepsIn">'+t('stepsToday')+'</label><input id="stepsIn" class="input num" inputmode="numeric" placeholder="'+t('stepsPh')+'" style="height:40px;flex:1;min-width:0"><button class="btn sm" style="min-height:40px" data-act="saveSteps">'+t('saveEntry')+'</button></div></div>';
  var rem=[],today=dkey(),dow=new Date().getDay();
  if(st.reminders.checkin&&dow===5)rem.push(t('remCheckin'));
  if(st.reminders.weigh&&!st.weights.some(function(w){return w.date===today;}))rem.push(t('remWeigh'));
@@ -473,13 +507,14 @@ function vToday(){var tg=targets(),tot=totals(),ns=nextSess(),p=plan(),h='';
  rem.slice(0,2).forEach(function(r){h+='<div class="note"><span class="accent">'+ic('cal')+'</span><span>'+esc(r)+'</span></div>';});
  return h;}
 
+function sessMin(s){var n=0;s.items.forEach(function(x){n+=x.reps.length;});return Math.round(Math.min(75,Math.max(30,n*2.6))/5)*5;}
 function findSess(pid,key){var p=PLANS[pid];for(var i=0;i<p.sessions.length;i++)if(p.sessions[i].key===key)return p.sessions[i];return p.sessions[0];}
 
 function vWorkoutIdle(){var p=plan(),h='';
  h+='<div class="head"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">'+t('plan')+' · '+esc(L(p.name))+'</span><h1>'+t('workout')+'</h1></div></div>';
  h+='<div class="card"><span class="small muted">'+t('planOrder')+'</span><div class="list">';
  p.sessions.forEach(function(s,i){var isN=i===st.nextIndex%p.sessions.length;
-  h+='<div class="li"><div class="t"><span style="font-weight:700">'+esc(L(s.name))+'</span><span class="small muted">'+esc(L(s.focus))+' · '+t('nEx',{n:s.items.length})+'</span></div>'+(isN?'<span class="badge">'+t('next').toUpperCase()+'</span>':'')+'</div>';});
+  h+='<div class="li"><div class="t"><span style="font-weight:700">'+esc(L(s.name))+(isN?' <span class="badge">'+t('next').toUpperCase()+'</span>':'')+'</span><span class="small muted">'+esc(L(s.focus))+' · '+t('nEx',{n:s.items.length})+' · '+t('approxMin',{n:sessMin(s)})+'</span></div><button class="btn sec sm" data-act="pickSess" data-v="'+i+'" aria-label="'+esc(L(s.name))+'">'+ic('play',14)+'</button></div>';});
  h+='</div><button class="btn" data-act="startSession">'+ic('play',18)+t('startNamed',{s:L(nextSess().name)})+'</button></div>';
  h+='<div class="note"><span class="accent">'+ic('flame')+'</span><span><b>'+t('warmTitle')+'</b><br>'+t('warmBody')+'</span></div>';
  h+='<div class="card"><h3>'+t('recent')+'</h3>'+histList(5)+'</div>';
@@ -497,14 +532,16 @@ function vWorkoutActive(){var a=st.active,s=findSess(a.planId,a.sessionKey),h=''
   return h;}
  var it=a.items[a.exIdx],nm=exNm(it.exId),last=st.lastByEx[it.exId];
  if(a.exIdx===0&&!it.log.some(function(x){return x.done;}))h+='<div class="note"><span class="accent">'+ic('flame')+'</span><span><b>'+t('warmTitle')+'</b><br>'+t('warmBody')+'</span></div>';
- h+='<div class="row" style="align-items:center;gap:14px"><button class="demo" data-act="demo" aria-label="'+t('formDemo')+'"><span class="accent">'+ic('play',28)+'</span><span class="tiny muted">'+t('formDemo')+'</span></button><div style="display:flex;flex-direction:column;gap:3px;min-width:0"><span class="eyebrow accent" style="font-size:12px">'+t('exOfN',{x:a.exIdx+1,y:n})+'</span><h2 style="font-size:22px">'+esc(nm.p)+'</h2><span class="small muted">'+esc(nm.s)+' · '+t('targetReps',{a:it.rmin,b:it.rmax})+'</span><button class="btn sec sm" style="align-self:flex-start;min-height:32px;margin-top:4px" data-act="swapAsk">'+ic('swap',16)+t('swap')+'</button></div></div>';
+ h+='<div class="row" style="align-items:center;gap:14px"><button class="demo" data-act="demo" aria-label="'+t('formDemo')+'"><span class="accent">'+ic('play',28)+'</span><span class="tiny muted">'+t('formDemo')+'</span></button><div style="display:flex;flex-direction:column;gap:3px;min-width:0"><span class="eyebrow accent" style="font-size:12px">'+t('exOfN',{x:a.exIdx+1,y:n})+'</span><h2 style="font-size:22px">'+esc(nm.p)+'</h2><span class="small muted">'+esc(nm.s)+'</span><span class="row" style="gap:6px;flex-wrap:wrap"><span class="badge">'+esc(L(METHODS[it.m]||METHODS.straight)).toUpperCase()+(it.ss?' '+it.ss:'')+'</span><span class="tiny muted num">'+it.reps.join(' · ')+'</span></span><button class="btn sec sm" style="align-self:flex-start;min-height:32px;margin-top:4px" data-act="swapAsk">'+ic('swap',16)+t('swap')+'</button></div></div>';
+ var mt=METHODS[it.m]||METHODS.straight,pj=partnerIdx(a);
+ if(it.m!=='straight')h+='<div class="note"><span class="accent">'+ic('info')+'</span><span>'+esc(st.lang==='ar'?mt.tipAr:mt.tipEn)+(pj>=0?' <b>'+esc(t('partner',{x:exNm(a.items[pj].exId).p}))+'</b>':'')+'</span></div>';
  if(ui.demoMsg)h+='<div class="note"><span class="accent">'+ic('info')+'</span><span>'+t('demoSoon')+'</span></div>';
  if(st.increaseNext[it.exId])h+='<div class="note"><span class="accent">'+ic('trend')+'</span><span>'+t('increasePlanned')+'</span></div>';
  h+='<div class="small muted" style="background:var(--surface);border-radius:12px;padding:10px 12px">'+(last&&last.length?t('lastTime',{v:last.map(function(x){return fmt(x.kg,1)+' '+t('kg')+' × '+x.reps;}).join(' · ')}):t('firstTime'))+'</div>';
  var curIdx=it.log.findIndex(function(x){return !x.done;});
- h+='<div class="card" style="padding:6px 14px"><div class="sets"><div class="setrow headr"><span>'+t('set')+'</span><span>'+t('kg')+'</span><span>'+t('reps')+'</span><span style="text-align:center">'+t('done')+'</span></div>';
- it.log.forEach(function(x,i){var ph=last&&last[i]?last[i].reps:it.rmax;
-  h+='<div class="setrow'+(x.done?' done':'')+(i===curIdx?' cur':'')+'"><span class="num" style="font-weight:800'+(i===curIdx?';color:var(--accent)':'')+'">'+(i+1)+'</span>'+
+ h+='<div class="card" style="padding:6px 14px"><div class="sets"><div class="setrow headr"><span>'+t('set')+'</span><span>'+t('goal2')+'</span><span>'+t('kg')+'</span><span>'+t('reps')+'</span><span style="text-align:center">'+t('done')+'</span></div>';
+ it.log.forEach(function(x,i){var ph=x.target;var isDrop=it.m==='drop'&&i===it.log.length-1;
+  h+='<div class="setrow'+(x.done?' done':'')+(i===curIdx?' cur':'')+'"><span class="num" style="font-weight:800'+(i===curIdx?';color:var(--accent)':'')+'">'+(i+1)+'</span><span class="num" style="font-weight:700;color:var(--muted)">'+x.target+(isDrop?'<span class="accent">↓</span>':'')+'</span>'+
   '<label><span class="vh">'+t('kg')+' '+t('set')+' '+(i+1)+'</span><input class="setin" inputmode="decimal" data-in="kg" data-i="'+i+'" value="'+esc(x.kg)+'" placeholder="0"></label>'+
   '<label><span class="vh">'+t('reps')+' '+t('set')+' '+(i+1)+'</span><input class="setin" inputmode="numeric" data-in="reps" data-i="'+i+'" value="'+esc(x.reps)+'" placeholder="'+ph+'"></label>'+
   '<button class="check" data-act="toggleSet" data-i="'+i+'" aria-pressed="'+x.done+'" aria-label="'+t('done')+' '+(i+1)+'"'+(ui.justDone===i&&x.done?' data-pop="1"':'')+'>'+(x.done?'<span style="color:var(--on-accent)">'+ic('check',20,2.6)+'</span>':'')+'</button></div>';});
@@ -521,6 +558,20 @@ function vWorkoutActive(){var a=st.active,s=findSess(a.planId,a.sessionKey),h=''
 
 function voiceCard(){var on=VC.on,msg=!paid()?t('voicePaid'):VC.err==='denied'?t('voiceDenied'):(on&&!SR)?t('voiceNoSR'):on?t('voiceOn'):t('voiceOff');
  return '<div class="card" style="gap:8px'+(on?';border-color:var(--accent)':'')+'"><div class="between"><span class="row" style="font-weight:700"><span class="accent">'+ic('headset',20)+'</span>'+t('voiceCoach')+'</span>'+(paid()?'<button class="switch" role="switch" aria-checked="'+on+'" aria-label="'+t('voiceCoach')+'" data-act="voice"></button>':'<span class="faint">'+ic('lockic',18)+'</span>')+'</div><span class="small muted">'+msg+'</span>'+(on&&VC.last?'<span class="tiny faint">'+esc(t('heard',{x:VC.last}))+'</span>':'')+'</div>';}
+var MEAL_T={breakfast:[['oats',.35],['egg',.35],['dates',.15],['milk',.15]],lunch:[['chkC',.4],['riceC',.42],['salad',.06],['olive',.12]],dinner:[['salmon',.45],['potato',.4],['salad',.05],['olive',.10]],snack:[['greek',.5],['banana',.3],['almond',.2]],snack2:[['whey',.45],['apple',.3],['pb',.25]],iftar:[['dates',.1],['lentil',.2],['chkC',.3],['riceC',.3],['salad',.04],['olive',.06]],suhoor:[['foul',.3],['egg',.25],['khubz',.3],['laban',.15]]};
+var MEAL_SPLIT={3:[['breakfast',.3],['lunch',.4],['dinner',.3]],4:[['breakfast',.25],['lunch',.35],['snack',.15],['dinner',.25]],5:[['breakfast',.22],['snack',.12],['lunch',.3],['snack2',.12],['dinner',.24]],R:[['iftar',.45],['snack',.2],['suhoor',.35]]};
+var BANDS=[1600,1800,2000,2200,2500,2800,3000,3300,3600];
+function mealPlan(){var tg=targets(),band=BANDS.reduce(function(a,b){return Math.abs(b-tg.k)<Math.abs(a-tg.k)?b:a;});
+ var sp=st.ramadan&&paid()?MEAL_SPLIT.R:MEAL_SPLIT[st.mealsN||4],tot={k:0,p:0,c:0,f:0};
+ var meals=sp.map(function(m){var mk=band*m[1],items=MEAL_T[m[0]].map(function(x){var f=findFood(x[0]),g=Math.max(5,Math.round(mk*x[1]/(f.k/100)/5)*5),r=g/100;tot.k+=f.k*r;tot.p+=f.p*r;tot.c+=f.c*r;tot.f+=f.f*r;return {id:x[0],g:g,k:f.k*r};});
+  return {key:m[0],k:items.reduce(function(a,b){return a+b.k;},0),items:items};});
+ return {band:band,meals:meals,tot:tot,tg:tg};}
+function logMeal(key){var mp=mealPlan(),m=null;mp.meals.forEach(function(x){if(x.key===key)m=x;});if(!m)return;var to=key==='snack2'?'snack':key;m.items.forEach(function(x){addEntry(to,x.id,x.g);});}
+function mealPlanCard(){var mp=mealPlan(),h='<div class="card"><div class="between"><h3>'+t('mealPlanTitle')+'</h3><span class="pill num">'+fmt(mp.band)+' '+t('kcal')+'</span></div><span class="small muted">'+t('closestBand',{n:fmt(mp.tg.k)})+'</span>';
+ if(!(st.ramadan&&paid()))h+='<div class="field"><span class="small muted" style="font-weight:600">'+t('mealsPerDay')+'</span>'+seg('mealsN',String(st.mealsN||4),[['3','3'],['4','4'],['5','5']])+'</div>';
+ h+='<div class="list">'+mp.meals.map(function(m){return '<div class="li" style="flex-direction:column;align-items:stretch;gap:6px"><div class="between"><span style="font-weight:700">'+t(m.key==='snack2'?'snack':m.key)+' <span class="small muted num">'+fmt(m.k)+' '+t('kcal')+'</span></span><button class="btn sec sm" style="min-height:34px" data-act="logMeal" data-v="'+m.key+'">'+ic('plus',14,2.4)+t('logMealBtn')+'</button></div><span class="small muted">'+m.items.map(function(x){return esc(foodName(findFood(x.id)))+' <span class="num">'+x.g+' '+t('g')+'</span>';}).join(' · ')+'</span></div>';}).join('')+'</div>';
+ h+='<span class="small muted num">'+t('planTotals',{p:fmt(mp.tot.p),c:fmt(mp.tot.c),f:fmt(mp.tot.f)})+' · '+t('yourTarget')+' P '+mp.tg.p+' · C '+mp.tg.c+' · F '+mp.tg.f+'</span></div>';
+ return h;}
 function mealsList(){return st.ramadan&&paid()?['iftar','snack','suhoor']:['breakfast','lunch','snack','dinner'];}
 function vNutrition(){var tg=targets(),day=ui.day||dkey(),tot=totals(day),h='';
  var goalName=t(tg.goal);
@@ -539,6 +590,7 @@ function vNutrition(){var tg=targets(),day=ui.day||dkey(),tot=totals(day),h='';
  h+='</div></div>';
  var pl=tg.p-tot.p;
  h+='<div class="note"><span class="accent">'+ic('info')+'</span><span>'+(pl>=20?t('proteinLeft',{n:fmt(pl)}):t('onTrack'))+'</span></div>';
+ h+=mealPlanCard();
  return h;}
 
 function weightChart(){var wa=weeklyAvgs().slice(-8);if(wa.length<2)return '<span class="small faint">'+t('none')+'</span>';
@@ -581,16 +633,17 @@ function vProgress(){var h='',wa=weeklyAvgs(),cur=wa[wa.length-1],first=wa[Math.
  if(wl.length)h+='<div class="card"><h3>'+t('weight')+'</h3><div class="list">'+wl.map(function(w){return '<div class="li small"><span class="muted num">'+esc(shortDate(w.date))+'</span><span class="num" style="font-weight:600">'+fmt(w.kg,1)+' '+t('kg')+'</span></div>';}).join('')+'</div></div>';
  return h;}
 
+function visiblePlans(){if(paid())return PLAN_ORDER.slice();var m=new Date().getMonth(),out=[];for(var i=0;i<4;i++)out.push(PLAN_ORDER[(m*2+i)%PLAN_ORDER.length]);if(out.indexOf(st.planId)<0)out.unshift(st.planId);return out;}
 function seg(act,cur,opts){return '<div class="seg" role="group">'+opts.map(function(o){return '<button data-act="'+act+'" data-v="'+o[0]+'" aria-pressed="'+(cur===o[0])+'">'+o[1]+'</button>';}).join('')+'</div>';}
 function sw(key,on,label,disabled){return '<div class="li"><span'+(disabled?' class="faint"':'')+'>'+label+'</span><button class="switch" role="switch" aria-checked="'+on+'" aria-label="'+esc(label)+'" data-act="sw" data-v="'+key+'"'+(disabled?' disabled':'')+'></button></div>';}
 function vSettings(){var h='',pr=st.profile,tg=targets();
  h+='<div class="head"><h1>'+t('settings')+'</h1></div>';
  h+='<div class="card"><h3>'+t('language')+'</h3>'+seg('lang',st.lang,[['en','English'],['ar','العربية']])+'</div>';
  h+='<div class="card"><h3>'+t('appearance')+'</h3>'+seg('theme',st.theme,[['dark',t('dark')],['light',t('light')],['auto',t('auto')]])+'<span class="small muted">'+t('autoNote')+'</span></div>';
- h+='<div class="card"><h3>'+t('tierTitle')+'</h3><div class="choice">'+[['free','free'],['ai','ai'],['coach','coach']].map(function(x){var dis=isMinor()&&x[0]!=='free';return '<button class="opt" data-act="tier" data-v="'+x[0]+'" aria-pressed="'+(st.tier===x[0])+'"'+(dis?' disabled style="opacity:.45"':'')+'><span class="t"><span style="font-weight:700">'+t(x[1])+'</span></span>'+(st.tier===x[0]?'<span class="accent">'+ic('check',20,2.6)+'</span>':'')+'</button>';}).join('')+'</div>'+(isMinor()?'<span class="small muted">'+t('teenNote')+'</span>':'')+
+ h+='<div class="card"><div class="between"><h3>'+t('tierTitle')+'</h3><button class="btn sec sm" data-act="tiers">'+t('compare')+'</button></div><div class="choice">'+[['free','free'],['ai','ai'],['coach','coach']].map(function(x){var dis=isMinor()&&x[0]!=='free';return '<button class="opt" data-act="tier" data-v="'+x[0]+'" aria-pressed="'+(st.tier===x[0])+'"'+(dis?' disabled style="opacity:.45"':'')+'><span class="t"><span style="font-weight:700">'+t(x[1])+'</span></span>'+(st.tier===x[0]?'<span class="accent">'+ic('check',20,2.6)+'</span>':'')+'</button>';}).join('')+'</div>'+(isMinor()?'<span class="small muted">'+t('teenNote')+'</span>':'')+
   '<div class="list">'+sw('ramadan',!!st.ramadan&&paid(),t('ramadan'),!paid())+'</div><span class="small muted">'+t('ramadanNote')+(paid()?'':' · '+t('paidOnly'))+'</span></div>';
  h+='<div class="card"><h3>'+t('reminders')+'</h3><div class="list">'+sw('session',st.reminders.session,t('rSession'))+sw('checkin',st.reminders.checkin,t('rCheckin'))+sw('weigh',st.reminders.weigh,t('rWeigh'))+sw('meals',st.reminders.meals,t('rMeals'))+'</div><span class="small muted">'+t('remNote')+'</span></div>';
- h+='<div class="card"><h3>'+t('trainingPlan')+'</h3><div class="choice">'+Object.keys(PLANS).map(function(k){var p=PLANS[k];return '<button class="opt" data-act="setPlan" data-v="'+k+'" aria-pressed="'+(st.planId===k)+'"><span class="t"><span style="font-weight:700">'+esc(L(p.name))+'</span><span class="small muted">'+esc(L(p.desc))+'</span></span>'+(st.planId===k?'<span class="accent">'+ic('check',20,2.6)+'</span>':'')+'</button>';}).join('')+'</div></div>';
+ h+='<div class="card"><h3>'+t('trainingPlan')+'</h3>'+(paid()?'':'<span class="small muted">'+t('monthLib')+'</span>')+'<div class="choice">'+visiblePlans().map(function(k){var p=PLANS[k];return '<button class="opt" data-act="setPlan" data-v="'+k+'" aria-pressed="'+(st.planId===k)+'"><span class="t"><span style="font-weight:700">'+esc(L(p.name))+'</span><span class="small muted">'+esc(L(p.desc))+'</span></span>'+(st.planId===k?'<span class="accent">'+ic('check',20,2.6)+'</span>':'')+'</button>';}).join('')+'</div></div>';
  if(pr)h+='<div class="card"><div class="between"><h3>'+t('goalProfile')+'</h3><button class="btn sec sm" data-act="editProfile">'+t('edit')+'</button></div><span class="small muted num">'+t(pr.goal)+' · '+pr.age+' · '+pr.height+' '+t('cm')+' · '+pr.weight+' '+t('kg')+'</span><span class="small muted num">'+fmt(tg.k)+' '+t('kcal')+' · P '+tg.p+' · C '+tg.c+' · F '+tg.f+'</span></div>';
  h+='<button class="btn danger" data-act="resetAsk">'+t('reset')+'</button><span class="small faint" style="text-align:center">'+t('pilot')+'</span>';
  return h;}
@@ -609,8 +662,8 @@ function vOnb(){var o=ui.onb,h='',step=o.step;
  if(step===3){var minor=+d.age<18;
   h+='<h1>'+t('goal')+'</h1>'+(minor?'<div class="note"><span class="accent">'+ic('info')+'</span><span>'+t('teenNote')+'</span></div>':'')+'<div class="choice">'+['lose','maintain','gain'].map(function(g){var dis=minor&&g==='lose';return '<button class="opt" data-act="onbSet" data-k="goal" data-v="'+g+'" aria-pressed="'+(d.goal===g)+'"'+(dis?' disabled style="opacity:.45"':'')+'><span class="t"><span style="font-weight:700">'+t(g)+'</span><span class="small muted">'+t(g+'D')+'</span></span></button>';}).join('')+'</div>'+
   '<h3>'+t('level')+'</h3>'+seg('onbSet" data-k="level',d.level,[['beginner',t('beginner')],['intermediate',t('intermediate')],['advanced',t('advanced')]]);}
- if(step===4){var rec=d.level==='advanced'?'split':d.level==='intermediate'?'ppl':'ul';
-  h+='<h1>'+t('choosePlan')+'</h1><div class="choice">'+Object.keys(PLANS).map(function(k){var p=PLANS[k];return '<button class="opt" data-act="onbSet" data-k="plan" data-v="'+k+'" aria-pressed="'+((d.plan||rec)===k)+'"><span class="t"><span style="font-weight:700">'+esc(L(p.name))+(k===rec?' <span class="badge">'+t('recommended').toUpperCase()+'</span>':'')+'</span><span class="small muted">'+esc(L(p.desc))+'</span></span></button>';}).join('')+'</div>';}
+ if(step===4){var rec=d.level==='advanced'?'split':d.level==='intermediate'?'ppl':'fb';var vp=visiblePlans();if(vp.indexOf(rec)<0)vp.unshift(rec);
+  h+='<h1>'+t('choosePlan')+'</h1><div class="choice">'+vp.map(function(k){var p=PLANS[k];return '<button class="opt" data-act="onbSet" data-k="plan" data-v="'+k+'" aria-pressed="'+((d.plan||rec)===k)+'"><span class="t"><span style="font-weight:700">'+esc(L(p.name))+(k===rec?' <span class="badge">'+t('recommended').toUpperCase()+'</span>':'')+'</span><span class="small muted">'+esc(L(p.desc))+'</span></span></button>';}).join('')+'</div>';}
  if(step===5){var tgp=targets({sex:d.sex,age:+d.age,height:+d.height,weight:+d.weight,activity:+d.activity,goal:d.goal});
   h+='<h1>'+t('remAsk')+'</h1><span class="muted">'+t('remAskSub')+'</span><div class="card" style="padding:4px 16px"><div class="list">'+sw('session',st.reminders.session,t('rSession'))+sw('checkin',st.reminders.checkin,t('rCheckin'))+sw('weigh',st.reminders.weigh,t('rWeigh'))+sw('meals',st.reminders.meals,t('rMeals'))+'</div></div>'+
   '<div class="card"><span class="eyebrow accent">'+t('yourTargets')+'</span><span class="num" style="font-size:34px;font-weight:800">'+fmt(tgp.k)+' <span class="small muted" style="font-weight:600">'+t('kcal')+'</span></span><div class="grid3">'+[['protein',tgp.p],['carbs',tgp.c],['fat',tgp.f]].map(function(m){return '<div style="background:var(--surface2);border-radius:14px;padding:10px 12px"><div class="tiny muted">'+t(m[0])+'</div><div class="num" style="font-weight:700;font-size:17px">'+m[1]+' '+t('g')+'</div></div>';}).join('')+'</div><span class="small muted num">'+t('maintenanceLine',{n:fmt(tgp.maint)})+'</span></div>';}
@@ -621,6 +674,8 @@ function vOnb(){var o=ui.onb,h='',step=o.step;
 function vSheet(){var s=ui.sheet;if(!s)return '';var h='<div class="sheetwrap" data-act="sheetBg"><div class="sheet" role="dialog" aria-modal="true" data-stop="1"><div class="grab"></div>';
  if(s==='endAsk'){var left=0;st.active.items.forEach(function(it){it.log.forEach(function(x){if(!x.done)left++;});});
   h+='<h2>'+t('endTitle')+'</h2><span class="muted">'+t('endBody',{n:left})+'</span><button class="btn" data-act="finish">'+t('endSave')+'</button><button class="btn sec" data-act="closeSheet">'+t('keepGoing')+'</button>';}
+ if(s==='pickSess'){var ps=plan().sessions[ui.pickIdx];h+='<h2>'+esc(L(ps.name))+'</h2><span class="muted">'+esc(L(ps.focus))+' · '+t('nEx',{n:ps.items.length})+'</span><div class="list">'+ps.items.map(function(x){return '<div class="li small"><span>'+esc(exNm(x.ex).p)+(x.ss?' <span class="badge">SS '+x.ss+'</span>':'')+'</span><span class="muted num">'+x.reps.join(' · ')+'</span></div>';}).join('')+'</div><button class="btn" data-act="startPicked">'+ic('play',18)+t('startNow')+'</button><button class="btn sec" data-act="makeNext">'+t('makeNext')+'</button><span class="small muted">'+t('pickNote')+'</span>';}
+ if(s==='tiers'){h+='<h2>'+t('compareTiers')+'</h2>'+tierTable()+'<span class="small muted">'+t('soonNote')+'</span><button class="btn sec" data-act="closeSheet">'+t('close')+'</button>';}
  if(s==='resetAsk'){h+='<h2>'+t('reset')+'</h2><span class="muted">'+t('resetQ')+'</span><button class="btn danger" data-act="reset">'+t('erase')+'</button><button class="btn sec" data-act="closeSheet">'+t('cancel')+'</button>';}
  if(s==='scan'){h+='<h2>'+t('scanTitle')+'</h2><span class="muted">'+(paid()?t('scanSoon'):t('scanPaid')+' '+t('switchTier'))+'</span><button class="btn" data-act="closeSheet">'+t('ok')+'</button>';}
  if(s==='swap'){var it=st.active.items[st.active.exIdx];
@@ -635,6 +690,9 @@ function vSheet(){var s=ui.sheet;if(!s)return '';var h='<div class="sheetwrap" d
    '<div class="grid3" id="fPrev">'+foodPrev(f,m)+'</div><button class="btn" data-act="foodAdd">'+t('add')+'</button><button class="btn ghost" data-act="foodPick" data-v="">'+t('back')+'</button>';}
   else{h+='<label class="vh" for="fQ">'+t('search')+'</label><input id="fQ" class="input" placeholder="'+t('search')+'" data-in="foodQ" value="'+esc(ui.foodQ)+'" autocomplete="off"><div class="list" id="fList">'+foodListHtml(q)+'</div><button class="btn sec" data-act="foodPick" data-v="custom">'+ic('plus',16,2.4)+t('customFood')+'</button>';}}
  return h+'</div></div>';}
+function tierTable(){var Y='<span class="accent">'+ic('check',18,2.6)+'</span>',N='<span class="faint">—</span>',SN='<span class="tiny muted">'+t('soon')+'</span>';
+ var rows=[['tf1',Y,Y,Y],['tf2',Y,Y,Y],['tf3',Y,Y,Y],['tf4',Y,Y,Y],['tf5',Y,Y,Y],['tf6','4/'+PLAN_ORDER.length,Y,Y],['tf7',N,Y,Y],['tf8',N,Y,Y],['tf9',N,Y,Y],['tf10',N,Y,Y],['tf11',N,SN,SN],['tf12',N,SN,SN],['tf13',N,SN,SN],['tf14',N,N,SN]];
+ return '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr><th style="text-align:start;padding:8px 4px"></th><th style="padding:8px 4px">'+t('free')+'</th><th style="padding:8px 4px">'+t('ai')+'</th><th style="padding:8px 4px">'+t('coach')+'</th></tr></thead><tbody>'+rows.map(function(r){return '<tr style="border-top:1px solid var(--line)"><td style="padding:9px 4px">'+t(r[0])+'</td><td style="text-align:center">'+r[1]+'</td><td style="text-align:center">'+r[2]+'</td><td style="text-align:center">'+r[3]+'</td></tr>';}).join('')+'</tbody></table></div>';}
 function foodPrev(f,m){return '<div style="background:var(--surface2);border-radius:12px;padding:10px"><div class="tiny muted">'+t('kcal')+'</div><div class="num" style="font-weight:700">'+fmt(f.k*m)+'</div></div><div style="background:var(--surface2);border-radius:12px;padding:10px"><div class="tiny muted">'+t('protein')+'</div><div class="num" style="font-weight:700">'+fmt(f.p*m,1)+' '+t('g')+'</div></div><div style="background:var(--surface2);border-radius:12px;padding:10px"><div class="tiny muted">'+t('carbs')+' / '+t('fat')+'</div><div class="num" style="font-weight:700">'+fmt(f.c*m)+' / '+fmt(f.f*m)+'</div></div>';}
 function foodListHtml(q){var all=st.customFoods.concat(FOODS).filter(function(f){if(!q)return true;var n=(f.custom?f.name:(f.en+' '+f.ar)).toLowerCase();return n.indexOf(q)>=0;});
  return all.slice(0,40).map(function(f){return '<button class="foodbtn" data-act="foodPick" data-v="'+f.id+'"><span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-weight:600">'+esc(foodName(f))+'</span><span class="tiny muted">'+(f.st?t(f.st):'')+(f.approx?' · '+t('approx'):'')+'</span></span><span class="small muted num" style="white-space:nowrap">'+fmt(f.k)+' / 100 '+t('g')+'</span></button>';}).join('')||'<span class="small faint">'+t('none')+'</span>';}
@@ -655,9 +713,9 @@ function render(){applyTheme();var app=document.getElementById('app'),y=window.s
  lastRoute=ui.route+(ui.onb?'o'+ui.onb.step:'');window.scrollTo(0,same?y:0);}
 
 /* ---------- Session logic ---------- */
-function buildItem(exId,sets,rmin,rmax){var last=st.lastByEx[exId]||[];var log=[];for(var i=0;i<sets;i++){var l=last[i]||last[last.length-1];log.push({kg:l?String(l.kg):'',reps:'',done:false});}return {exId:exId,sets:sets,rmin:rmin,rmax:rmax,log:log};}
-function startSession(){if(st.active){ui.route='workout';render();return;}var s=nextSess();
- st.active={planId:st.planId,sessionKey:s.key,startedAt:Date.now(),exIdx:0,stage:'lift',restEnd:null,prompt:null,cardioMin:'',items:s.items.map(function(x){return buildItem(x[0],x[1],x[2],x[3]);})};
+function buildItem(x){var last=st.lastByEx[x.ex]||[];var log=x.reps.map(function(r,i){var l=last[i]||last[last.length-1];return {kg:l?String(l.kg):'',reps:String(r),target:r,done:false};});return {exId:x.ex,sets:x.reps.length,reps:x.reps,rmin:Math.min.apply(null,x.reps),rmax:Math.max.apply(null,x.reps),m:x.m||'straight',ss:x.ss||null,rest:x.rest||null,log:log};}
+function startSession(idx){if(st.active){ui.route='workout';render();return;}var p=plan();if(idx==null)idx=st.nextIndex%p.sessions.length;var s=p.sessions[idx];
+ st.active={planId:st.planId,sessionKey:s.key,sessIdx:idx,startedAt:Date.now(),exIdx:0,stage:'lift',restEnd:null,prompt:null,cardioMin:'',items:s.items.map(function(x){return buildItem(x);})};
  save();ui.route='workout';wake();render();}
 function finish(withCardio){var a=st.active;if(!a)return;var sets=0,vol=0,detail=[];
  a.items.forEach(function(it){var done=it.log.filter(function(x){return x.done;});if(done.length){st.lastByEx[it.exId]=done.map(function(x){return {kg:+x.kg||0,reps:+x.reps||0};});}
@@ -666,7 +724,7 @@ function finish(withCardio){var a=st.active;if(!a)return;var sets=0,vol=0,detail
   if(a.incSet&&a.incSet[it.exId])st.increaseNext[it.exId]=true;});
  var cardio=withCardio?(parseInt(a.cardioMin,10)||0):0;
  var rec={id:Date.now(),date:dkey(),planId:a.planId,sessionKey:a.sessionKey,duration:Date.now()-a.startedAt,sets:sets,volume:Math.round(vol),cardio:cardio,detail:detail};
- st.history.push(rec);st.nextIndex=(st.nextIndex+1)%PLANS[a.planId].sessions.length;st.active=null;save();
+ st.history.push(rec);st.nextIndex=((a.sessIdx!=null?a.sessIdx:st.nextIndex)+1)%PLANS[a.planId].sessions.length;st.active=null;save();
  ui.sheet=null;ui.celebrate=rec;ui.restDone=false;release();voiceStop();render();}
 var wl=null;function wake(){try{if(navigator.wakeLock)navigator.wakeLock.request('screen').then(function(l){wl=l;}).catch(function(){});}catch(e){}}
 function release(){try{if(wl){wl.release();wl=null;}}catch(e){}}
@@ -692,8 +750,8 @@ function voiceCmd(tx){var a=st.active;if(!a)return;
  if(has(tx,['next','التالي','اللي بعده','بعده'])){syncInputs();if(a.exIdx<a.items.length-1){a.exIdx++;a.restEnd=null;a.prompt=null;save();render();cueEx();}else{a.stage='cardio';save();render();say(t('sayCardio'));}return;}
  if(has(tx,['start','go','ابدأ','ابدا','يلا','يلّا'])){if(a.restEnd){a.restEnd=null;save();render();}cueNextSet();return;}}
 function cueNextSet(){var a=st.active;if(!a||a.stage!=='lift')return;var it=a.items[a.exIdx],ci=it.log.findIndex(function(x){return !x.done;});if(ci<0)return;var x=it.log[ci],last=st.lastByEx[it.exId];
- say(t('sayRestDone',{s:ci+1,kg:x.kg||'0',r:x.reps||(last&&last[ci]?last[ci].reps:it.rmax)}));}
-function cueEx(){var a=st.active;if(!a||a.stage!=='lift')return;var it=a.items[a.exIdx];say(t('sayEx',{e:exNm(it.exId).p,n:it.sets,a:it.rmin,b:it.rmax}));}
+ say(t('sayRestDone',{s:ci+1,kg:x.kg||'0',r:x.reps||x.target}));}
+function cueEx(){var a=st.active;if(!a||a.stage!=='lift')return;var it=a.items[a.exIdx];say(t('sayEx',{e:exNm(it.exId).p,n:it.sets,a:it.reps.join(', ')}));}
 
 /* ---------- Demo data ---------- */
 function demoData(){var now=new Date();function ago(n){var d=new Date(now);d.setDate(d.getDate()-n);return dkey(d);}
@@ -723,6 +781,13 @@ document.addEventListener('click',function(ev){unlockAudio();
  case 'sw':if(v==='ramadan')st.ramadan=!st.ramadan;else st.reminders[v]=!st.reminders[v];break;
  case 'setPlan':if(st.planId!==v){st.planId=v;st.nextIndex=0;}break;
  case 'startSession':startSession();return;
+ case 'pickSess':ui.pickIdx=+v;ui.sheet='pickSess';break;
+ case 'startPicked':ui.sheet=null;startSession(ui.pickIdx);return;
+ case 'makeNext':st.nextIndex=ui.pickIdx;ui.sheet=null;save();break;
+ case 'tiers':ui.sheet='tiers';break;
+ case 'mealsN':st.mealsN=+v;break;
+ case 'logMeal':logMeal(v);break;
+ case 'saveSteps':var sp=parseInt(val('stepsIn'),10);if(sp>=0&&sp<100000){st.steps=st.steps||{};st.steps[dkey()]=sp;save();}break;
  case 'toggleSet':syncInputs();setToggle(+el.getAttribute('data-i'));break;
  case 'rest':if(!a||!a.restEnd)break;if(v==='skip'){a.restEnd=null;}else{a.restEnd+=(+v)*1000;if(a.restEnd<Date.now())a.restEnd=null;}save();break;
  case 'inc':var eid=a.items[a.exIdx].exId;a.incAsked=a.incAsked||{};a.incAsked[eid]=true;a.incSet=a.incSet||{};a.incSet[eid]=v==='1';a.prompt=null;save();break;
@@ -733,7 +798,7 @@ document.addEventListener('click',function(ev){unlockAudio();
  case 'finishNoCardio':syncInputs();finish(false);return;
  case 'endAsk':syncInputs();ui.sheet='endAsk';break;
  case 'swapAsk':ui.sheet='swap';break;
- case 'doSwap':var cur=a.items[a.exIdx];a.items[a.exIdx]=buildItem(v,cur.sets,cur.rmin,cur.rmax);ui.sheet=null;save();break;
+ case 'doSwap':var cur=a.items[a.exIdx];a.items[a.exIdx]=buildItem({ex:v,reps:cur.reps,m:cur.m,ss:cur.ss,rest:cur.rest});ui.sheet=null;save();break;
  case 'demo':ui.demoMsg=!ui.demoMsg;break;
  case 'closeSheet':ui.sheet=null;break;
  case 'closeCelebrate':ui.celebrate=null;ui.route='today';break;
@@ -759,13 +824,17 @@ document.addEventListener('click',function(ev){unlockAudio();
  case 'demoData':demoData();return;
  }
  save();render();});
+function partnerIdx(a){var it=a.items[a.exIdx];if(!it.ss)return -1;for(var k=0;k<a.items.length;k++)if(k!==a.exIdx&&a.items[k].ss===it.ss)return k;return -1;}
 function setToggle(i){var a=st.active,it=a.items[a.exIdx],x=it.log[i];if(!x)return;
- if(!x.done){if(x.reps===''){var last=st.lastByEx[it.exId];x.reps=String(last&&last[i]?last[i].reps:it.rmax);}x.done=true;ui.justDone=i;try{if(navigator.vibrate)navigator.vibrate(30);}catch(e){}
-  var all=it.log.every(function(z){return z.done;});
-  if(all){a.restEnd=null;var top=it.log.every(function(z){return (+z.reps||0)>=it.rmax;});if(top&&!(a.incAsked&&a.incAsked[it.exId]))a.prompt=it.exId;say(t('sayDone'));}
-  else{var r=EX[it.exId].rest||90;a.restEnd=Date.now()+r*1000;ui.restDone=false;say(t('sayRest',{n:r}));}}
- else{x.done=false;}
- save();}
+ if(x.done){x.done=false;save();return;}
+ if(x.reps==='')x.reps=String(x.target||it.rmax);x.done=true;ui.justDone=i;try{if(navigator.vibrate)navigator.vibrate(30);}catch(e){}
+ var all=it.log.every(function(z){return z.done;});
+ if(all){var top=it.log.every(function(z){return (+z.reps||0)>=(z.target||it.rmax);});if(top&&!(a.incAsked&&a.incAsked[it.exId]))a.prompt=it.exId;}
+ var j=partnerIdx(a);
+ if(j>=0){var pl=a.items[j].log,pi=pl.findIndex(function(z){return !z.done;});
+  if(pi>=0&&!(a.prompt===it.exId)){a.exIdx=j;a.restEnd=null;ui.restDone=false;save();var pn=exNm(a.items[j].exId).p;say(pn+'. '+(st.lang==='ar'?'المجموعة ':'Set ')+(pi+1));return;}}
+ if(all&&j<0){a.restEnd=null;say(t('sayDone'));save();return;}
+ var r=it.rest||EX[it.exId].rest||90;a.restEnd=Date.now()+r*1000;ui.restDone=false;say(t('sayRest',{n:r}));save();}
 function val(id){var e=document.getElementById(id);return e?e.value:'';}
 function defaultMeal(){var h=new Date().getHours(),ms=mealsList();if(ms[0]==='iftar')return h>=2&&h<12?'suhoor':'iftar';return h<11?'breakfast':h<16?'lunch':h<19?'snack':'dinner';}
 function addEntry(meal,id,g){var f=findFood(id),m=g/100,day=ui.day||dkey();(st.food[day]=st.food[day]||[]).push({id:String(Date.now()),meal:meal,foodId:id,grams:g,k:Math.round(f.k*m),p:Math.round(f.p*m*10)/10,c:Math.round(f.c*m*10)/10,f:Math.round(f.f*m*10)/10});save();}
@@ -773,7 +842,7 @@ function syncInputs(){var a=st.active;if(!a||a.stage!=='lift')return;var it=a.it
 function onbNext(){var o=ui.onb,d=o.d;o.err=null;
  if(o.step===1){if(!d.name||!d.age||!d.height||!d.weight||!d.sex){o.err=t('needFields');return;}
   if(+d.age<13){o.err=t('tooYoung');return;}if(+d.age<18&&d.goal==='lose')d.goal='maintain';}
- if(o.step===4&&!d.plan)d.plan=d.level==='advanced'?'split':d.level==='intermediate'?'ppl':'ul';
+ if(o.step===4&&!d.plan)d.plan=d.level==='advanced'?'split':d.level==='intermediate'?'ppl':'fb';
  if(o.step===5||(o.edit&&o.step===4)){var prof={name:String(d.name).trim(),sex:d.sex,age:+d.age,height:+d.height,weight:+d.weight,activity:+d.activity,goal:+d.age<18?'maintain':d.goal,level:d.level};
   var goalChanged=st.profile&&st.profile.goal!==prof.goal;st.profile=prof;if(goalChanged)st.kcalAdjust=0;if(prof.age<18)st.tier='free';
   if(st.planId!==d.plan){st.planId=d.plan;st.nextIndex=0;}
@@ -794,6 +863,7 @@ setInterval(function(){var a=st.active;if(!a)return;
   if(left<=0){a.restEnd=null;ui.restDone=true;save();beep();cueNextSet();var ae=document.activeElement;if(!(ae&&ae.tagName==='INPUT')){syncInputs();render();}}}},500);
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible'&&st.active)wake();});
 try{window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(st.theme==='auto')render();});}catch(e){}
+if(st.active&&!(st.active.items&&st.active.items[0]&&st.active.items[0].reps))st.active=null;
 if(st.active)ui.route='workout';
 render();
 })();
