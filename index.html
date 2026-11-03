@@ -23,7 +23,7 @@ html,body{margin:0}
   --bg:#000000; --surface:#111214; --surface2:#1C1C1E; --line:#232428;
   --fg:#F5F5F7; --muted:#A1A1A6; --faint:#8E8E93;
   --accent:#2F8CFF; --on-accent:#00122B; --tint:rgba(47,140,255,.15);
-  --danger:#FF6B6B; --tabbar:#0A0A0B;
+  --danger:#FF6B6B; --tabbar:#0A0A0B; --stripe:.10;
   --font-en: Inter, -apple-system, system-ui, "Segoe UI", sans-serif;
   --font-ar: "IBM Plex Sans Arabic", "Geeza Pro", Tahoma, sans-serif;
   color-scheme: dark;
@@ -32,13 +32,14 @@ html,body{margin:0}
   --bg:#F2F3F7; --surface:#FFFFFF; --surface2:#ECEEF3; --line:#E1E3EA;
   --fg:#0B0C0F; --muted:#565A66; --faint:#656A76;
   --accent:#0A66E8; --on-accent:#FFFFFF; --tint:rgba(10,102,232,.10);
-  --danger:#C62828; --tabbar:#FBFBFD; color-scheme: light } }
+  --danger:#C62828; --tabbar:#FBFBFD; --stripe:.05; color-scheme: light } }
 :root[data-theme="light"]{
   --bg:#F2F3F7; --surface:#FFFFFF; --surface2:#ECEEF3; --line:#E1E3EA;
   --fg:#0B0C0F; --muted:#565A66; --faint:#656A76;
   --accent:#0A66E8; --on-accent:#FFFFFF; --tint:rgba(10,102,232,.10);
-  --danger:#C62828; --tabbar:#FBFBFD; color-scheme: light }
+  --danger:#C62828; --tabbar:#FBFBFD; --stripe:.05; color-scheme: light }
 html,body{background:var(--bg);color:var(--fg)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
 body{font-family:var(--font-en);font-size:15px;line-height:1.4;-webkit-font-smoothing:antialiased}
 html[lang="ar"] body{font-family:var(--font-ar)}
 *{box-sizing:border-box}
@@ -151,7 +152,7 @@ html[lang="ar"] .hero .htitle{font-style:normal;letter-spacing:0;text-transform:
 .hero .heye{font-size:12px;font-weight:800;letter-spacing:.8px;color:#DCE9FF}
 .hero .btn{background:#00122B;color:#FFFFFF}
 .hero .chip{background:rgba(0,18,43,.28);color:#FFFFFF}
-.tile.sp::before{content:"";position:absolute;left:-60px;right:-60px;top:-80px;height:220px;transform:skewY(-14deg);background:repeating-linear-gradient(90deg,var(--accent) 0 4px,transparent 4px 26px);opacity:.10;pointer-events:none}
+.tile.sp::before{content:"";position:absolute;left:-60px;right:-60px;top:-80px;height:220px;transform:skewY(-14deg);background:repeating-linear-gradient(90deg,var(--accent) 0 4px,transparent 4px 26px);opacity:var(--stripe);pointer-events:none}
 .tile{position:relative;overflow:hidden} .tile>*{position:relative}
 .bigi{font-size:28px;font-weight:900;font-style:italic;letter-spacing:-.5px}
 html[lang="ar"] .bigi{font-style:normal}
@@ -188,7 +189,7 @@ html[lang="ar"] .bigi{font-style:normal}
 <script>
 (function(){
 'use strict';
-var KEY='momentiq.pilot.v1';
+var KEY='momentiq.pilot.v2';
 var I = {
  check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
  home:'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
@@ -255,7 +256,7 @@ en:{today:'Today',workout:'Workout',nutrition:'Nutrition',progress:'Progress',se
  tierTitle:'Plan (test, no payment)',free:'Free',ai:'AI Assistant',coach:'Personal Coaching',
  ramadan:'Ramadan mode',ramadanNote:'Meals switch to Iftar and Suhoor.',paidOnly:'AI Assistant and Personal Coaching',
  trainingPlan:'Training plan',goalProfile:'Goal and body details',edit:'Edit',reset:'Erase all data',resetQ:'Erase everything on this phone? This cannot be undone.',erase:'Erase',cancel:'Cancel',
- pilot:'Pilot version 0.1 · data stays in this browser on this phone.',
+ pilot:'Pilot version 0.2 · data stays in this browser on this phone.',
  welcome:'Train with momentum.',welcomeSub:'Workouts, cardio and nutrition in one simple app.',getStarted:'Get started',tryDemo:'Explore with sample data',
  aboutYou:'About you',sex:'Sex',male:'Male',female:'Female',age:'Age',height:'Height (cm)',bodyWeight:'Weight (kg)',yourName:'First name',
  activity:'Daily activity',act1:'Mostly sitting',act1d:'Desk work, little walking',act2:'Lightly active',act2d:'Some walking during the day',act3:'Active',act3d:'On your feet most of the day',act4:'Very active',act4d:'Physical job or sport most days',
@@ -266,7 +267,7 @@ en:{today:'Today',workout:'Workout',nutrition:'Nutrition',progress:'Progress',se
  yourTargets:'Your daily targets',maintenanceLine:'Maintenance about {n} kcal',startTraining:'Start training',
  back:'Back',continue:'Continue',tooYoung:'Momentiq is for ages 13 and up.',teenNote:'Under 18 you get general training and nutrition at maintenance calories, without deficit plans or subscriptions.',
  needFields:'Fill in every field to continue.',delete:'Delete',raw:'raw',cooked:'cooked',dry:'dry',ready:'prepared',fresh:'fresh',approx:'approx.',
- g:'g',kg:'kg',cm:'cm',kcal:'kcal',min:'min'},
+ g:'g',kg:'kg',cm:'cm',kcal:'kcal',min:'min',demoOn:'You are looking at sample data.',startOwn:'Start my own',voiceCoach:'Voice coach',voiceOn:'Listening · say “Done” after a set, “Skip” to skip rest, “Next” for the next exercise.',voiceOff:'Turn on to hear cues and control sets with your voice. Works with Bluetooth earphones while the app stays open.',voiceNoSR:'Voice commands are not supported in this browser. Spoken cues still work.',voiceDenied:'Microphone access was refused. Allow it for Safari in iPhone Settings, then try again.',voicePaid:'Voice coach is part of AI Assistant and Personal Coaching.',sayRest:'Rest {n} seconds.',sayRestDone:'Rest over. Set {s}. {kg} kilos. {r} reps.',sayEx:'{e}. {n} sets of {a} to {b} reps.',sayDone:'Set done.',sayCardio:'Lifting done. Time for cardio.',heard:'Heard: {x}'},
 ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progress:'التقدّم',settings:'الإعدادات',
  nextSession:'الحصة التالية',sessionXofY:'الحصة {x} من {y}',nEx:'{n} تمارين',approxMin:'~{n} دقيقة',cardioChip:'+ 20–30 دقيقة كارديو',
  start:'ابدأ التمرين',resume:'أكمل التمرين',inProgress:'حصة جارية',kcalLeft:'سعرة متبقية',kcalOver:'سعرة زيادة',
@@ -305,7 +306,7 @@ ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progr
  tierTitle:'الباقة (تجربة بدون دفع)',free:'المجاني',ai:'المساعد الذكي',coach:'التدريب الشخصي',
  ramadan:'وضع رمضان',ramadanNote:'الوجبات تتحول لإفطار وسحور.',paidOnly:'المساعد الذكي والتدريب الشخصي',
  trainingPlan:'خطة التمرين',goalProfile:'الهدف وبيانات الجسم',edit:'تعديل',reset:'حذف كل البيانات',resetQ:'تحذف كل شي على هذا الجوال؟ ما تقدر ترجعه.',erase:'احذف',cancel:'إلغاء',
- pilot:'النسخة التجريبية 0.1 · البيانات محفوظة في هذا المتصفح على جوالك.',
+ pilot:'النسخة التجريبية 0.2 · البيانات محفوظة في هذا المتصفح على جوالك.',
  welcome:'تمرّن بزخم.',welcomeSub:'التمارين والكارديو والتغذية في تطبيق واحد بسيط.',getStarted:'ابدأ',tryDemo:'جرّب ببيانات مثال',
  aboutYou:'عنك',sex:'الجنس',male:'ذكر',female:'أنثى',age:'العمر',height:'الطول (سم)',bodyWeight:'الوزن (كجم)',yourName:'الاسم الأول',
  activity:'نشاطك اليومي',act1:'جلوس أغلب الوقت',act1d:'عمل مكتبي ومشي قليل',act2:'نشاط خفيف',act2d:'بعض المشي خلال اليوم',act3:'نشيط',act3d:'واقف أغلب اليوم',act4:'نشيط جداً',act4d:'عمل بدني أو رياضة أغلب الأيام',
@@ -316,7 +317,7 @@ ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progr
  yourTargets:'احتياجك اليومي',maintenanceLine:'سعرات الثبات تقريباً {n}',startTraining:'ابدأ التمرين',
  back:'رجوع',continue:'متابعة',tooYoung:'Momentiq متاح من عمر 13 سنة وفوق.',teenNote:'تحت 18 سنة تحصل على تمارين وتغذية عامة بسعرات الثبات، بدون خطط عجز أو اشتراكات.',
  needFields:'عبّئ كل الخانات عشان تكمل.',delete:'حذف',raw:'نيء',cooked:'مطبوخ',dry:'جاف',ready:'جاهز',fresh:'طازج',approx:'تقريبي',
- g:'جم',kg:'كجم',cm:'سم',kcal:'سعرة',min:'دقيقة'}
+ g:'جم',kg:'كجم',cm:'سم',kcal:'سعرة',min:'دقيقة',demoOn:'أنت تشوف بيانات مثال.',startOwn:'ابدأ بياناتي',voiceCoach:'المدرب الصوتي',voiceOn:'يسمعك الحين · قل «خلصت» بعد المجموعة، و«تخطي» للراحة، و«التالي» للتمرين اللي بعده.',voiceOff:'شغّله عشان تسمع التنبيهات وتتحكم بالمجموعات بصوتك. يشتغل مع سماعات البلوتوث ما دام التطبيق مفتوح.',voiceNoSR:'الأوامر الصوتية غير مدعومة في هذا المتصفح، لكن التنبيهات الصوتية تشتغل.',voiceDenied:'تم رفض الوصول للمايكروفون. فعّله لـ Safari من إعدادات الآيفون وجرّب مرة ثانية.',voicePaid:'المدرب الصوتي من مزايا المساعد الذكي والتدريب الشخصي.',sayRest:'راحة {n} ثانية.',sayRestDone:'انتهت الراحة. المجموعة {s}. {kg} كيلو. {r} تكرار.',sayEx:'{e}. {n} مجموعات من {a} إلى {b} تكرار.',sayDone:'تمت المجموعة.',sayCardio:'خلص الحديد. وقت الكارديو.',heard:'سمعت: {x}'}
 };
 
 /* ---------- Data ---------- */
@@ -394,7 +395,7 @@ var FOODS=[
 ].map(function(a){return {id:a[0],en:a[1],ar:a[2],st:a[3],k:a[4],p:a[5],c:a[6],f:a[7],approx:!!a[8]};});
 
 /* ---------- State ---------- */
-function blank(){return {lang:'en',theme:'dark',tier:'free',ramadan:false,profile:null,planId:'ppl',nextIndex:0,history:[],lastByEx:{},increaseNext:{},
+function blank(){return {demo:false,lang:'en',theme:'dark',tier:'free',ramadan:false,profile:null,planId:'ppl',nextIndex:0,history:[],lastByEx:{},increaseNext:{},
  food:{},customFoods:[],weights:[],waists:[],reminders:{session:true,checkin:true,weigh:false,meals:false},kcalAdjust:0,adaptDismissed:'',active:null};}
 var st=blank();
 try{var raw=localStorage.getItem(KEY); if(raw){var o=JSON.parse(raw); for(var k in o) st[k]=o[k];}}catch(e){}
@@ -404,7 +405,7 @@ var ui={route:'today',sheet:null,onb:null,celebrate:null,day:null,foodQ:'',foodS
 function t(k,v){var s=(T[st.lang]&&T[st.lang][k])||T.en[k]||k; if(v){for(var x in v){s=s.split('{'+x+'}').join(v[x]);}} return s;}
 function L(o){return o[st.lang]||o.en;}
 function dkey(d){d=d||new Date();var m=d.getMonth()+1,dd=d.getDate();return d.getFullYear()+'-'+(m<10?'0':'')+m+'-'+(dd<10?'0':'')+dd;}
-function fmt(n,dp){if(n==null||isNaN(n))return '–';return Number(n).toLocaleString('en-US',{maximumFractionDigits:dp==null?0:dp,minimumFractionDigits:dp||0});}
+function fmt(n,dp,mn){if(n==null||isNaN(n))return '–';return Number(n).toLocaleString('en-US',{maximumFractionDigits:dp==null?0:dp,minimumFractionDigits:mn||0});}
 function exNm(id){var e=EX[id];return {p:st.lang==='ar'?e.ar:e.en,s:st.lang==='ar'?e.en:e.ar};}
 function plan(){return PLANS[st.planId]||PLANS.ppl;}
 function nextSess(){var p=plan();return p.sessions[st.nextIndex%p.sessions.length];}
@@ -420,7 +421,7 @@ function targets(pr){pr=pr||st.profile;if(!pr)return null;
  var k=goal==='lose'?maint*0.8:goal==='gain'?maint*1.1:maint;
  k=Math.round((k+(pr.age<18?0:(st.kcalAdjust||0)))/10)*10;
  var pPer=goal==='lose'?2.0:goal==='gain'?1.8:1.6;
- var p=Math.round(pr.weight*pPer), f=Math.round(k*0.25/9), c=Math.max(0,Math.round((k-p*4-f*9)/4));
+ var hm=pr.height/100,ref=pr.weight/(hm*hm)>27?25*hm*hm:pr.weight;var p=Math.round(ref*pPer), f=Math.round(k*0.25/9), c=Math.max(0,Math.round((k-p*4-f*9)/4));
  return {maint:maint,k:k,p:p,c:c,f:f,goal:goal};}
 function dayFood(day){return st.food[day||dkey()]||[];}
 function totals(day){var s={k:0,p:0,c:0,f:0};dayFood(day).forEach(function(e){s.k+=e.k;s.p+=e.p;s.c+=e.c;s.f+=e.f;});return s;}
@@ -448,6 +449,7 @@ function tabbar(){var tabs=[['today','home'],['workout','dumbbell'],['nutrition'
  return '<div class="tabbar"><nav aria-label="Main">'+tabs.map(function(x){return '<button class="tab" data-act="route" data-v="'+x[0]+'"'+(ui.route===x[0]?' aria-current="page"':'')+'>'+ic(x[1],24)+t(x[0])+'</button>';}).join('')+'</nav></div>';}
 
 /* ---------- Screens ---------- */
+function demoBar(){return st.demo?'<div class="note" style="align-items:center;justify-content:space-between"><span>'+t('demoOn')+'</span><button class="btn sm" data-act="leaveDemo">'+t('startOwn')+'</button></div>':'';}
 function vToday(){var tg=targets(),tot=totals(),ns=nextSess(),p=plan(),h='';
  var name=st.profile&&st.profile.name?', '+esc(st.profile.name):'';
  h+='<div class="head"><div style="display:flex;flex-direction:column;gap:2px"><span class="eyebrow">'+esc(longDate(new Date()))+'</span><h1>'+t('today')+'</h1></div></div>';
@@ -462,7 +464,7 @@ function vToday(){var tg=targets(),tot=totals(),ns=nextSess(),p=plan(),h='';
  var wa=weeklyAvgs(),cur=wa[wa.length-1],prev=wa[wa.length-2];
  var wk=weekStart(dkey()),nW=st.history.filter(function(x){return weekStart(x.date)===wk;}).length;
  h+='<div class="grid2"><div class="tile sp"><span class="small muted">'+t('weightAvg')+'</span>'+(cur?'<span class="bigi num">'+fmt(cur.avg,1)+' <span class="small muted" style="font-weight:600">'+t('kg')+'</span></span>'+(prev?'<span class="small accent" style="font-weight:600">'+t('vsLast',{v:(cur.avg-prev.avg>0?'+':'')+fmt(cur.avg-prev.avg,1)})+'</span>':''):'<span class="small faint">'+t('noWeight')+'</span>')+'</div>'+
-  '<div class="tile sp"><span class="small muted">'+t('sessionsWeek')+'</span><span class="bigi num">'+nW+(nW>0?' 🔥':'')+'</span><span class="small muted">'+t('goalN',{n:p.sessions.length>3?4:3})+'</span></div></div>';
+  '<div class="tile sp"><span class="small muted">'+t('sessionsWeek')+'</span><span class="bigi num">'+nW+(nW>0?' 🔥':'')+'</span><span class="small muted">'+t('goalN',{n:p.sessions.length})+'</span></div></div>';
  var rem=[],today=dkey(),dow=new Date().getDay();
  if(st.reminders.checkin&&dow===5)rem.push(t('remCheckin'));
  if(st.reminders.weigh&&!st.weights.some(function(w){return w.date===today;}))rem.push(t('remWeigh'));
@@ -483,7 +485,7 @@ function vWorkoutIdle(){var p=plan(),h='';
  h+='<div class="card"><h3>'+t('recent')+'</h3>'+histList(5)+'</div>';
  return h;}
 function histList(n){var hs=st.history.slice(-n).reverse();if(!hs.length)return '<span class="small faint">'+t('none')+'</span>';
- return '<div class="list">'+hs.map(function(x){var s=findSess(x.planId,x.sessionKey);return '<div class="li"><div class="t"><span style="font-weight:600">'+esc(L(s.name))+'</span><span class="small muted num">'+esc(shortDate(x.date))+' · '+dur(x.duration)+' · '+x.sets+' '+t('setsDone').toLowerCase()+(x.cardio?' · '+x.cardio+' '+t('min')+' '+t('cardio').toLowerCase():'')+'</span></div><span class="small muted num">'+fmt(x.volume)+' '+t('kg')+'</span></div>';}).join('')+'</div>';}
+ return '<div class="list">'+hs.map(function(x){var s=findSess(x.planId,x.sessionKey);return '<div class="li"><div class="t"><span style="font-weight:600">'+esc(L(s.name))+'</span><span class="small muted num">'+esc(shortDate(x.date))+' · '+Math.max(1,Math.round(x.duration/60000))+' '+t('min')+' · '+x.sets+' '+t('setsDone').toLowerCase()+(x.cardio?' · '+x.cardio+' '+t('min')+' '+t('cardio').toLowerCase():'')+'</span></div><span class="small muted num">'+fmt(x.volume)+' '+t('kg')+'</span></div>';}).join('')+'</div>';}
 
 function vWorkoutActive(){var a=st.active,s=findSess(a.planId,a.sessionKey),h='';
  h+='<div class="between"><button class="iconbtn" data-act="route" data-v="today" aria-label="'+t('today')+'">'+ic(st.lang==='ar'?'fwd':'back',20)+'</button><div style="display:flex;flex-direction:column;align-items:center"><span style="font-weight:700">'+esc(L(s.name))+'</span><span class="small muted num"><span data-tick="elapsed">'+dur(Date.now()-a.startedAt)+'</span> '+t('elapsed')+'</span></div><button class="btn ghost sm" data-act="endAsk">'+t('end')+'</button></div>';
@@ -510,13 +512,15 @@ function vWorkoutActive(){var a=st.active,s=findSess(a.planId,a.sessionKey),h=''
  if(a.restEnd){h+='<div class="card restcard" style="flex-direction:row;align-items:center;gap:14px"><div style="flex:1;display:flex;flex-direction:column"><span class="eyebrow" style="font-size:12px;color:#DCE9FF">'+t('rest')+'</span><span class="num" data-tick="rest" style="font-size:34px;font-weight:900;font-style:italic">'+dur(Math.max(0,a.restEnd-Date.now()))+'</span></div><button class="iconbtn num" data-act="rest" data-v="-15" aria-label="-15 s" style="font-weight:700;font-size:13px">−15</button><button class="iconbtn num" data-act="rest" data-v="15" aria-label="+15 s" style="font-weight:700;font-size:13px">+15</button><button class="btn sec sm" data-act="rest" data-v="skip">'+t('skip')+'</button></div>';}
  else if(ui.restDone){h+='<div class="note"><span class="accent">'+ic('check')+'</span><span>'+t('restDone')+'</span></div>';}
  if(a.prompt===it.exId){h+='<div class="card"><span style="font-weight:600">'+t('increaseQ')+'</span><div class="grid2"><button class="btn sm" style="width:100%" data-act="inc" data-v="1">'+t('yes')+'</button><button class="btn sec sm" style="width:100%" data-act="inc" data-v="0">'+t('notYet')+'</button></div></div>';}
- h+='<div class="row small muted"><span class="accent">'+ic('headset',18)+'</span>'+t('voiceNote')+'</div>';
+ h+=voiceCard();
  var allDone=it.log.every(function(x){return x.done;});
  if(curIdx>=0)h+='<button class="btn" data-act="toggleSet" data-i="'+curIdx+'">'+t('done')+' · '+t('set')+' '+(curIdx+1)+'</button>';
  var navNext=a.exIdx<n-1?'<button class="btn'+(allDone?'':' sec')+'" data-act="exGo" data-v="'+(a.exIdx+1)+'">'+t('nextEx')+'</button>':'<button class="btn'+(allDone?'':' sec')+'" data-act="toCardio">'+t('toCardio')+'</button>';
  h+=(a.exIdx>0?'<div class="grid2"><button class="btn ghost" data-act="exGo" data-v="'+(a.exIdx-1)+'">'+t('prevEx')+'</button>'+navNext+'</div>':navNext);
  return h;}
 
+function voiceCard(){var on=VC.on,msg=!paid()?t('voicePaid'):VC.err==='denied'?t('voiceDenied'):(on&&!SR)?t('voiceNoSR'):on?t('voiceOn'):t('voiceOff');
+ return '<div class="card" style="gap:8px'+(on?';border-color:var(--accent)':'')+'"><div class="between"><span class="row" style="font-weight:700"><span class="accent">'+ic('headset',20)+'</span>'+t('voiceCoach')+'</span>'+(paid()?'<button class="switch" role="switch" aria-checked="'+on+'" aria-label="'+t('voiceCoach')+'" data-act="voice"></button>':'<span class="faint">'+ic('lockic',18)+'</span>')+'</div><span class="small muted">'+msg+'</span>'+(on&&VC.last?'<span class="tiny faint">'+esc(t('heard',{x:VC.last}))+'</span>':'')+'</div>';}
 function mealsList(){return st.ramadan&&paid()?['iftar','snack','suhoor']:['breakfast','lunch','snack','dinner'];}
 function vNutrition(){var tg=targets(),day=ui.day||dkey(),tot=totals(day),h='';
  var goalName=t(tg.goal);
@@ -646,7 +650,7 @@ var lastRoute=null;
 function render(){applyTheme();var app=document.getElementById('app'),y=window.scrollY,same=lastRoute===ui.route+(ui.onb?'o'+ui.onb.step:'');
  var h;
  if(!st.profile||ui.onb){if(!ui.onb)ui.onb={step:0,d:{sex:'male',activity:2,goal:'lose',level:'beginner'}};h=vOnb();document.getElementById('tabs').innerHTML='';}
- else{h=ui.route==='today'?vToday():ui.route==='workout'?(st.active?vWorkoutActive():vWorkoutIdle()):ui.route==='nutrition'?vNutrition():ui.route==='progress'?vProgress():vSettings();document.getElementById('tabs').innerHTML=tabbar();}
+ else{h=demoBar()+(ui.route==='today'?vToday():ui.route==='workout'?(st.active?vWorkoutActive():vWorkoutIdle()):ui.route==='nutrition'?vNutrition():ui.route==='progress'?vProgress():vSettings());document.getElementById('tabs').innerHTML=tabbar();}
  app.classList.toggle('anim',!same);app.innerHTML=h;ui.justDone=null;document.getElementById('overlay').innerHTML=vSheet()+vCelebrate();
  lastRoute=ui.route+(ui.onb?'o'+ui.onb.step:'');window.scrollTo(0,same?y:0);}
 
@@ -663,11 +667,33 @@ function finish(withCardio){var a=st.active;if(!a)return;var sets=0,vol=0,detail
  var cardio=withCardio?(parseInt(a.cardioMin,10)||0):0;
  var rec={id:Date.now(),date:dkey(),planId:a.planId,sessionKey:a.sessionKey,duration:Date.now()-a.startedAt,sets:sets,volume:Math.round(vol),cardio:cardio,detail:detail};
  st.history.push(rec);st.nextIndex=(st.nextIndex+1)%PLANS[a.planId].sessions.length;st.active=null;save();
- ui.sheet=null;ui.celebrate=rec;ui.restDone=false;release();render();}
+ ui.sheet=null;ui.celebrate=rec;ui.restDone=false;release();voiceStop();render();}
 var wl=null;function wake(){try{if(navigator.wakeLock)navigator.wakeLock.request('screen').then(function(l){wl=l;}).catch(function(){});}catch(e){}}
 function release(){try{if(wl){wl.release();wl=null;}}catch(e){}}
 var actx=null;function unlockAudio(){try{if(!actx){var C=window.AudioContext||window.webkitAudioContext;if(C)actx=new C();}if(actx&&actx.state==='suspended')actx.resume();}catch(e){}}
 function beep(){try{if(!actx)return;[0,0.22].forEach(function(d){var o=actx.createOscillator(),g=actx.createGain();o.frequency.value=880;o.connect(g);g.connect(actx.destination);var t0=actx.currentTime+d;g.gain.setValueAtTime(0.0001,t0);g.gain.exponentialRampToValueAtTime(0.25,t0+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t0+0.18);o.start(t0);o.stop(t0+0.2);});if(navigator.vibrate)navigator.vibrate(200);}catch(e){}}
+
+/* ---------- Voice coach ---------- */
+var SR=window.SpeechRecognition||window.webkitSpeechRecognition||null;
+var VC={on:false,rec:null,err:null,last:'',speaking:false};
+function vlang(){return st.lang==='ar'?'ar-AE':'en-US';}
+function say(txt){if(!VC.on)return;try{if(!window.speechSynthesis)return;speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(txt);u.lang=vlang();u.rate=1;VC.speaking=true;if(VC.rec){try{VC.rec.abort();}catch(e){}}u.onend=u.onerror=function(){VC.speaking=false;recStart();};speechSynthesis.speak(u);}catch(e){}}
+function recStart(){if(!VC.on||!SR||VC.speaking||VC.err==='denied')return;try{if(!VC.rec){var r=new SR();r.lang=vlang();r.continuous=true;r.interimResults=false;
+ r.onresult=function(ev){for(var i=ev.resultIndex;i<ev.results.length;i++){if(ev.results[i].isFinal){var tx=ev.results[i][0].transcript.trim();VC.last=tx;voiceCmd(tx.toLowerCase());}}};
+ r.onerror=function(ev){if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){VC.err='denied';render();}};
+ r.onend=function(){if(VC.on&&!VC.speaking&&VC.err!=='denied')setTimeout(recStart,300);};VC.rec=r;}
+ VC.rec.lang=vlang();VC.rec.start();}catch(e){}}
+function voiceStart(){VC.on=true;VC.err=null;VC.rec=null;wake();say(st.lang==='ar'?'المدرب الصوتي شغّال.':'Voice coach on.');if(!window.speechSynthesis)recStart();}
+function voiceStop(){VC.on=false;try{if(VC.rec)VC.rec.abort();}catch(e){}VC.rec=null;try{speechSynthesis.cancel();}catch(e){}}
+function has(tx,words){for(var i=0;i<words.length;i++)if(tx.indexOf(words[i])>=0)return true;return false;}
+function voiceCmd(tx){var a=st.active;if(!a)return;
+ if(has(tx,['done','finish','complete','خلصت','خلاص','تم','انتهيت','خلصنا'])){if(a.stage!=='lift')return;var it=a.items[a.exIdx],ci=it.log.findIndex(function(x){return !x.done;});if(ci>=0){syncInputs();setToggle(ci);render();}return;}
+ if(has(tx,['skip','تخطي','تخطى','سكيب'])){if(a.restEnd){a.restEnd=null;save();render();cueNextSet();}return;}
+ if(has(tx,['next','التالي','اللي بعده','بعده'])){syncInputs();if(a.exIdx<a.items.length-1){a.exIdx++;a.restEnd=null;a.prompt=null;save();render();cueEx();}else{a.stage='cardio';save();render();say(t('sayCardio'));}return;}
+ if(has(tx,['start','go','ابدأ','ابدا','يلا','يلّا'])){if(a.restEnd){a.restEnd=null;save();render();}cueNextSet();return;}}
+function cueNextSet(){var a=st.active;if(!a||a.stage!=='lift')return;var it=a.items[a.exIdx],ci=it.log.findIndex(function(x){return !x.done;});if(ci<0)return;var x=it.log[ci],last=st.lastByEx[it.exId];
+ say(t('sayRestDone',{s:ci+1,kg:x.kg||'0',r:x.reps||(last&&last[ci]?last[ci].reps:it.rmax)}));}
+function cueEx(){var a=st.active;if(!a||a.stage!=='lift')return;var it=a.items[a.exIdx];say(t('sayEx',{e:exNm(it.exId).p,n:it.sets,a:it.rmin,b:it.rmax}));}
 
 /* ---------- Demo data ---------- */
 function demoData(){var now=new Date();function ago(n){var d=new Date(now);d.setDate(d.getDate()-n);return dkey(d);}
@@ -680,7 +706,7 @@ function demoData(){var now=new Date();function ago(n){var d=new Date(now);d.set
   var vol=detail.reduce(function(a,b){return a+b.kg*b.reps;},0);st.history.push({id:k,date:ago(day),planId:'ppl',sessionKey:sd[0],duration:(48+k%4*3)*60000,sets:detail.length,volume:Math.round(vol),cardio:k%2?20:0,detail:detail});
   sd[1].forEach(function(x){st.lastByEx[x[0]]=[0,1,2].map(function(){return {kg:x[1]+(x[1]>=30?bump:0),reps:x[2]};});});day-=3;}
  st.nextIndex=0;var td=dkey();st.food={};st.food[td]=[mk('breakfast','egg',150),mk('breakfast','oats',60),mk('breakfast','dates',24),mk('lunch','machboos',350),mk('lunch','salad',120),mk('snack','greek',170)];
- st.reminders={session:true,checkin:true,weigh:true,meals:false};ui.onb=null;save();ui.route='today';render();}
+ st.reminders={session:true,checkin:true,weigh:true,meals:false};st.demo=true;ui.onb=null;save();ui.route='today';render();}
 function mk(meal,id,g){var f=findFood(id),m=g/100;return {id:Date.now()+Math.random(),meal:meal,foodId:id,grams:g,k:Math.round(f.k*m),p:Math.round(f.p*m*10)/10,c:Math.round(f.c*m*10)/10,f:Math.round(f.f*m*10)/10};}
 
 /* ---------- Events ---------- */
@@ -697,17 +723,12 @@ document.addEventListener('click',function(ev){unlockAudio();
  case 'sw':if(v==='ramadan')st.ramadan=!st.ramadan;else st.reminders[v]=!st.reminders[v];break;
  case 'setPlan':if(st.planId!==v){st.planId=v;st.nextIndex=0;}break;
  case 'startSession':startSession();return;
- case 'toggleSet':var it=a.items[a.exIdx],i=+el.getAttribute('data-i'),x=it.log[i];syncInputs();
-  if(!x.done){if(x.reps===''){var last=st.lastByEx[it.exId];x.reps=String(last&&last[i]?last[i].reps:it.rmax);}x.done=true;ui.justDone=i;try{if(navigator.vibrate)navigator.vibrate(30);}catch(e){}
-   var all=it.log.every(function(z){return z.done;});
-   if(all){a.restEnd=null;var top=it.log.every(function(z){return (+z.reps||0)>=it.rmax;});if(top&&!(a.incAsked&&a.incAsked[it.exId]))a.prompt=it.exId;}
-   else{var r=EX[it.exId].rest||90;a.restEnd=Date.now()+r*1000;ui.restDone=false;}}
-  else{x.done=false;}
-  save();break;
+ case 'toggleSet':syncInputs();setToggle(+el.getAttribute('data-i'));break;
  case 'rest':if(!a||!a.restEnd)break;if(v==='skip'){a.restEnd=null;}else{a.restEnd+=(+v)*1000;if(a.restEnd<Date.now())a.restEnd=null;}save();break;
  case 'inc':var eid=a.items[a.exIdx].exId;a.incAsked=a.incAsked||{};a.incAsked[eid]=true;a.incSet=a.incSet||{};a.incSet[eid]=v==='1';a.prompt=null;save();break;
- case 'exGo':syncInputs();a.stage='lift';a.exIdx=+v;a.restEnd=null;a.prompt=null;ui.restDone=false;ui.demoMsg=false;save();break;
- case 'toCardio':syncInputs();a.stage='cardio';a.restEnd=null;a.prompt=null;save();break;
+ case 'exGo':syncInputs();a.stage='lift';a.exIdx=+v;a.restEnd=null;a.prompt=null;ui.restDone=false;ui.demoMsg=false;save();cueEx();break;
+ case 'voice':if(VC.on)voiceStop();else voiceStart();break;
+ case 'toCardio':syncInputs();a.stage='cardio';a.restEnd=null;a.prompt=null;save();say(t('sayCardio'));break;
  case 'finish':syncInputs();finish(true);return;
  case 'finishNoCardio':syncInputs();finish(false);return;
  case 'endAsk':syncInputs();ui.sheet='endAsk';break;
@@ -730,13 +751,21 @@ document.addEventListener('click',function(ev){unlockAudio();
  case 'logWaist':var c=parseFloat(val('waistIn'));if(c>30&&c<250){var td2=dkey();st.waists=st.waists.filter(function(z){return z.date!==td2;});st.waists.push({date:td2,cm:c});save();}break;
  case 'adapt':st.kcalAdjust=(st.kcalAdjust||0)+(+v);st.adaptDismissed=el.getAttribute('data-k');save();break;
  case 'adaptNo':st.adaptDismissed=el.getAttribute('data-k');save();break;
- case 'editProfile':var p=st.profile;ui.onb={step:1,edit:true,d:{name:p.name,sex:p.sex,age:p.age,height:p.height,weight:p.weight,activity:p.activity,goal:p.goal,level:p.level,plan:st.planId}};break;
+ case 'leaveDemo':var lg2=st.lang,th2=st.theme;try{localStorage.removeItem(KEY);}catch(e){}st=blank();st.lang=lg2;st.theme=th2;ui={route:'today',sheet:null,onb:null,celebrate:null,day:null,foodQ:'',foodSel:null,meal:null};break;
+ case 'editProfile':if(st.demo){var lg3=st.lang,th3=st.theme;st=blank();st.lang=lg3;st.theme=th3;ui.onb=null;break;}var p=st.profile;ui.onb={step:1,edit:true,d:{name:p.name,sex:p.sex,age:p.age,height:p.height,weight:p.weight,activity:p.activity,goal:p.goal,level:p.level,plan:st.planId}};break;
  case 'onbSet':ui.onb.d[el.getAttribute('data-k')]=isNaN(+v)?v:+v;break;
  case 'onbBack':if(ui.onb.step<=1&&ui.onb.edit){ui.onb=null;break;}ui.onb.step=Math.max(0,ui.onb.step-1);ui.onb.err=null;break;
  case 'onbNext':onbNext();break;
  case 'demoData':demoData();return;
  }
  save();render();});
+function setToggle(i){var a=st.active,it=a.items[a.exIdx],x=it.log[i];if(!x)return;
+ if(!x.done){if(x.reps===''){var last=st.lastByEx[it.exId];x.reps=String(last&&last[i]?last[i].reps:it.rmax);}x.done=true;ui.justDone=i;try{if(navigator.vibrate)navigator.vibrate(30);}catch(e){}
+  var all=it.log.every(function(z){return z.done;});
+  if(all){a.restEnd=null;var top=it.log.every(function(z){return (+z.reps||0)>=it.rmax;});if(top&&!(a.incAsked&&a.incAsked[it.exId]))a.prompt=it.exId;say(t('sayDone'));}
+  else{var r=EX[it.exId].rest||90;a.restEnd=Date.now()+r*1000;ui.restDone=false;say(t('sayRest',{n:r}));}}
+ else{x.done=false;}
+ save();}
 function val(id){var e=document.getElementById(id);return e?e.value:'';}
 function defaultMeal(){var h=new Date().getHours(),ms=mealsList();if(ms[0]==='iftar')return h>=2&&h<12?'suhoor':'iftar';return h<11?'breakfast':h<16?'lunch':h<19?'snack':'dinner';}
 function addEntry(meal,id,g){var f=findFood(id),m=g/100,day=ui.day||dkey();(st.food[day]=st.food[day]||[]).push({id:String(Date.now()),meal:meal,foodId:id,grams:g,k:Math.round(f.k*m),p:Math.round(f.p*m*10)/10,c:Math.round(f.c*m*10)/10,f:Math.round(f.f*m*10)/10});save();}
@@ -762,7 +791,7 @@ document.addEventListener('input',function(ev){var e=ev.target,k=e.getAttribute(
 setInterval(function(){var a=st.active;if(!a)return;
  document.querySelectorAll('[data-tick="elapsed"]').forEach(function(e){e.textContent=dur(Date.now()-a.startedAt);});
  if(a.restEnd){var left=a.restEnd-Date.now();document.querySelectorAll('[data-tick="rest"]').forEach(function(e){e.textContent=dur(Math.max(0,left));});
-  if(left<=0){a.restEnd=null;ui.restDone=true;save();beep();var ae=document.activeElement;if(!(ae&&ae.tagName==='INPUT')){syncInputs();render();}}}},500);
+  if(left<=0){a.restEnd=null;ui.restDone=true;save();beep();cueNextSet();var ae=document.activeElement;if(!(ae&&ae.tagName==='INPUT')){syncInputs();render();}}}},500);
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible'&&st.active)wake();});
 try{window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(st.theme==='auto')render();});}catch(e){}
 if(st.active)ui.route='workout';
