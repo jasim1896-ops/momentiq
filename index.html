@@ -268,7 +268,7 @@ en:{today:'Today',workout:'Workout',nutrition:'Nutrition',progress:'Progress',se
  tierTitle:'Plan (test, no payment)',free:'Free',ai:'AI Assistant',coach:'Personal Coaching',
  ramadan:'Ramadan mode',ramadanNote:'Meals switch to Iftar and Suhoor.',paidOnly:'AI Assistant and Personal Coaching',
  trainingPlan:'Training plan',goalProfile:'Goal and body details',edit:'Edit',reset:'Erase all data',resetQ:'Erase everything on this phone? This cannot be undone.',erase:'Erase',cancel:'Cancel',
- pilot:'Pilot version 0.8.1 · data stays in this browser on this phone.',
+ pilot:'Pilot version 0.8.2 · data stays in this browser on this phone.',
  welcome:'Train with momentum.',welcomeSub:'Workouts, cardio and nutrition in one simple app.',getStarted:'Get started',tryDemo:'Explore with sample data',
  aboutYou:'About you',sex:'Sex',male:'Male',female:'Female',age:'Age',height:'Height (cm)',bodyWeight:'Weight (kg)',yourName:'First name',
  activity:'Daily activity',act1:'Mostly sitting',act1d:'Desk work, little walking',act2:'Lightly active',act2d:'Some walking during the day',act3:'Active',act3d:'On your feet most of the day',act4:'Very active',act4d:'Physical job or sport most days',
@@ -318,7 +318,7 @@ ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progr
  tierTitle:'الباقة (تجربة بدون دفع)',free:'المجاني',ai:'المساعد الذكي',coach:'التدريب الشخصي',
  ramadan:'وضع رمضان',ramadanNote:'الوجبات تتحول لإفطار وسحور.',paidOnly:'المساعد الذكي والتدريب الشخصي',
  trainingPlan:'خطة التمرين',goalProfile:'الهدف وبيانات الجسم',edit:'تعديل',reset:'حذف كل البيانات',resetQ:'تحذف كل شي على هذا الجوال؟ ما تقدر ترجعه.',erase:'احذف',cancel:'إلغاء',
- pilot:'النسخة التجريبية 0.8.1 · البيانات محفوظة في هذا المتصفح على جوالك.',
+ pilot:'النسخة التجريبية 0.8.2 · البيانات محفوظة في هذا المتصفح على جوالك.',
  welcome:'تمرّن بزخم.',welcomeSub:'التمارين والكارديو والتغذية في تطبيق واحد بسيط.',getStarted:'ابدأ',tryDemo:'جرّب ببيانات مثال',
  aboutYou:'عنك',sex:'الجنس',male:'ذكر',female:'أنثى',age:'العمر',height:'الطول (سم)',bodyWeight:'الوزن (كجم)',yourName:'الاسم الأول',
  activity:'نشاطك اليومي',act1:'جلوس أغلب الوقت',act1d:'عمل مكتبي ومشي قليل',act2:'نشاط خفيف',act2d:'بعض المشي خلال اليوم',act3:'نشيط',act3d:'واقف أغلب اليوم',act4:'نشيط جداً',act4d:'عمل بدني أو رياضة أغلب الأيام',
@@ -428,6 +428,7 @@ var PATTERNS={
 var PAT_ORDER=['hyp','steady','str'];
 function curPat(){return PATTERNS[st.pattern]?st.pattern:'hyp';}
 function patItem(x,pk){var P=PATTERNS[pk||curPat()],o={};for(var k in x)o[k]=x[k];o.reps=P.reps.slice();o.m=x.ss?'superset':P.m;o.rest=x.ss?x.rest:P.rest;return o;}
+function applyPat(a,pk){var P=PATTERNS[pk];if(!P)return;a.pattern=pk;a.items.forEach(function(it){var nd=P.reps.length,nl=[];for(var i=0;i<nd;i++){var x=it.log[i];if(x&&x.done)nl.push(x);else{var o=x||it.log[it.log.length-1];nl.push({kg:o?o.kg:'',reps:String(P.reps[i]),target:P.reps[i],done:false});}}it.log.slice(nd).forEach(function(x){if(x.done)nl.push(x);});it.log=nl;it.reps=P.reps.slice();it.sets=nl.length;it.rmin=Math.min.apply(null,P.reps);it.rmax=Math.max.apply(null,P.reps);if(it.m!=='superset'){it.m=P.m;it.rest=P.rest;}});}
 function patChips(){var c=curPat();return '<div class="chiprow" role="group" aria-label="'+t('patTitle')+'">'+PAT_ORDER.map(function(k){return '<button data-act="pat" data-v="'+k+'" aria-pressed="'+(k===c)+'">'+esc(L(PATTERNS[k]))+'</button>';}).join('')+'</div>';}
 function patCard(){var c=PATTERNS[curPat()],d=st.patternSince?Math.floor((Date.now()-st.patternSince)/864e5):0;return '<div class="card"><h3>'+t('patTitle')+'</h3>'+patChips()+'<span class="small muted">'+esc(st.lang==='ar'?c.tipAr:c.tipEn)+'</span><span class="tiny faint">'+t('patNote')+(st.patternSince&&d>0?' · '+t('patWeeks',{n:d}):'')+'</span></div>';}
 var METHODS={
@@ -556,7 +557,7 @@ function histList(n){var hs=st.history.slice(-n).reverse();if(!hs.length)return 
 
 function vWorkoutActive(){var a=st.active,s=findSess(a.planId,a.sessionKey),h='';
  h+='<div class="between"><button class="iconbtn" data-act="route" data-v="today" aria-label="'+t('today')+'">'+ic(st.lang==='ar'?'fwd':'back',20)+'</button><div style="display:flex;flex-direction:column;align-items:center"><span style="font-weight:700">'+esc(L(s.name))+'</span><span class="small muted num"><span data-tick="elapsed">'+dur(Date.now()-a.startedAt)+'</span> '+t('elapsed')+'</span></div><button class="btn ghost sm" data-act="endAsk">'+t('end')+'</button></div>';
- var n=a.items.length;
+ var n=a.items.length;if(a.stage!=='cardio')h+='<div style="display:flex;flex-direction:column;gap:4px"><span class="tiny muted">'+t('patTitle')+'</span>'+patChips()+'</div>';
  h+='<div class="progress" aria-hidden="true">';for(var i=0;i<=n;i++){var on=i<n?a.items[i].log.every(function(x){return x.done;}):a.stage==='cardio';h+='<i class="'+(on||i===a.exIdx?'on':'')+'"></i>';}h+='</div>';
  if(a.stage==='cardio'){
   h+='<div class="card"><h2>'+t('cardio')+'</h2><span class="muted">'+t('cardioBody')+'</span><div class="field"><label for="cardioMin">'+t('minutes')+'</label><input id="cardioMin" class="input num" inputmode="numeric" data-in="cardio" value="'+esc(a.cardioMin||'')+'" placeholder="20"></div></div>';
@@ -858,7 +859,7 @@ document.addEventListener('click',function(ev){unlockAudio();
  case 'makeNext':st.nextIndex=ui.pickIdx;ui.sheet=null;save();break;
  case 'tiers':ui.sheet='tiers';break;
  case 'libG':ui.libG=v;break;
- case 'pat':if(st.pattern!==v){st.pattern=v;st.patternSince=Date.now();save();}break;
+ case 'pat':if(st.pattern!==v){st.pattern=v;st.patternSince=Date.now();}if(st.active&&st.active.pattern!==v)applyPat(st.active,v);save();break;
  case 'exInfo':ui.exId=v;ui.sheet='exInfo';break;
  case 'shareData':shareData();return;
  case 'copyData':ui.copied=false;try{navigator.clipboard.writeText(exportText()).then(function(){ui.copied=true;render();}).catch(function(){ui.sheet='export';render();});}catch(e){ui.sheet='export';render();}return;
@@ -944,6 +945,8 @@ if(st.active&&!(st.active.items&&st.active.items[0]&&st.active.items[0].reps))st
 if(st.active)ui.route='workout';
 render();
 })();
+/* auto-update: reload once if a newer version is live */
+(function(){try{var own=(document.documentElement.innerHTML.match(/version ([0-9.]+) ·/)||[])[1];if(!own||!window.fetch)return;fetch(location.pathname+'?chk='+Date.now(),{cache:'no-store'}).then(function(r){return r.text();}).then(function(tx){var m=tx.match(/version ([0-9.]+) ·/);if(m&&m[1]!==own){var k='momentiq.upd.'+m[1];try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');}catch(e){}location.replace(location.pathname+'?v='+m[1]);}}).catch(function(){});}catch(e){}})();
 </script>
 
 </body>
