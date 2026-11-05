@@ -268,7 +268,7 @@ en:{today:'Today',workout:'Workout',nutrition:'Nutrition',progress:'Progress',se
  tierTitle:'Plan (test, no payment)',free:'Free',ai:'AI Assistant',coach:'Personal Coaching',
  ramadan:'Ramadan mode',ramadanNote:'Meals switch to Iftar and Suhoor.',paidOnly:'AI Assistant and Personal Coaching',
  trainingPlan:'Training plan',goalProfile:'Goal and body details',edit:'Edit',reset:'Erase all data',resetQ:'Erase everything on this phone? This cannot be undone.',erase:'Erase',cancel:'Cancel',
- pilot:'Pilot version 0.9.1 · data stays in this browser on this phone.',
+ pilot:'Pilot version 0.9.2 · data stays in this browser on this phone.',
  welcome:'Train with momentum.',welcomeSub:'Workouts, cardio and nutrition in one simple app.',getStarted:'Get started',tryDemo:'Explore with sample data',
  aboutYou:'About you',sex:'Sex',male:'Male',female:'Female',age:'Age',height:'Height (cm)',bodyWeight:'Weight (kg)',yourName:'First name',
  activity:'Daily activity',act1:'Mostly sitting',act1d:'Desk work, little walking',act2:'Lightly active',act2d:'Some walking during the day',act3:'Active',act3d:'On your feet most of the day',act4:'Very active',act4d:'Physical job or sport most days',
@@ -318,7 +318,7 @@ ar:{today:'اليوم',workout:'التمرين',nutrition:'التغذية',progr
  tierTitle:'الباقة (تجربة بدون دفع)',free:'المجاني',ai:'المساعد الذكي',coach:'التدريب الشخصي',
  ramadan:'وضع رمضان',ramadanNote:'الوجبات تتحول لإفطار وسحور.',paidOnly:'المساعد الذكي والتدريب الشخصي',
  trainingPlan:'خطة التمرين',goalProfile:'الهدف وبيانات الجسم',edit:'تعديل',reset:'حذف كل البيانات',resetQ:'تحذف كل شي على هذا الجوال؟ ما تقدر ترجعه.',erase:'احذف',cancel:'إلغاء',
- pilot:'النسخة التجريبية 0.9.1 · البيانات محفوظة في هذا المتصفح على جوالك.',
+ pilot:'النسخة التجريبية 0.9.2 · البيانات محفوظة في هذا المتصفح على جوالك.',
  welcome:'تمرّن بزخم.',welcomeSub:'التمارين والكارديو والتغذية في تطبيق واحد بسيط.',getStarted:'ابدأ',tryDemo:'جرّب ببيانات مثال',
  aboutYou:'عنك',sex:'الجنس',male:'ذكر',female:'أنثى',age:'العمر',height:'الطول (سم)',bodyWeight:'الوزن (كجم)',yourName:'الاسم الأول',
  activity:'نشاطك اليومي',act1:'جلوس أغلب الوقت',act1d:'عمل مكتبي ومشي قليل',act2:'نشاط خفيف',act2d:'بعض المشي خلال اليوم',act3:'نشيط',act3d:'واقف أغلب اليوم',act4:'نشيط جداً',act4d:'عمل بدني أو رياضة أغلب الأيام',
@@ -428,9 +428,9 @@ var PATTERNS={
 var PAT_ORDER=['hyp','steady','str'];
 function curPat(){return PATTERNS[st.pattern]?st.pattern:'hyp';}
 function patReps(P,n){var r=P.reps.slice(0,n||P.reps.length);while(n&&r.length<n)r.push('');return r;}
-function patItem(x,pk){var P=PATTERNS[x.pat]||PATTERNS[pk]||PATTERNS[curPat()],o={};for(var k in x)o[k]=x[k];o.reps=patReps(P,x.setsN);o.m=x.ss?'superset':P.m;o.rest=x.ss?x.rest:P.rest;return o;}
+function patItem(x,pk){var P=PATTERNS[x.pat]||PATTERNS[pk]||PATTERNS[curPat()],o={};for(var k in x)o[k]=x[k];o.reps=patReps(P,x.setsN);o.m=x.ss?'superset':P.m;o.rest=x.rest||P.rest;return o;}
 function applyPat(a,pk){var P=PATTERNS[pk];if(!P)return;a.pattern=pk;a.items.forEach(function(it){applyPatTo(it,P);});}
-function applyPatTo(it,P){(function(it){var R=patReps(P,it.setsN),nd=R.length,nl=[];for(var i=0;i<nd;i++){var x=it.log[i];if(x&&x.done)nl.push(x);else{var o=x||it.log[it.log.length-1];nl.push({kg:R[i]===''?'':(o?o.kg:''),reps:String(R[i]),target:R[i],done:false});}}it.log.slice(nd).forEach(function(x){if(x.done)nl.push(x);});it.log=nl;it.reps=R;it.sets=nl.length;it.rmin=Math.min.apply(null,P.reps);it.rmax=Math.max.apply(null,P.reps);if(it.m!=='superset'){it.m=P.m;it.rest=P.rest;}})(it);}
+function applyPatTo(it,P){(function(it){var R=patReps(P,it.setsN),nd=R.length,nl=[];for(var i=0;i<nd;i++){var x=it.log[i];if(x&&x.done)nl.push(x);else{var o=x||it.log[it.log.length-1];nl.push({kg:R[i]===''?'':(o?o.kg:''),reps:String(R[i]),target:R[i],done:false});}}it.log.slice(nd).forEach(function(x){if(x.done)nl.push(x);});it.log=nl;it.reps=R;it.sets=nl.length;it.rmin=Math.min.apply(null,P.reps);it.rmax=Math.max.apply(null,P.reps);if(it.m!=='superset')it.m=P.m;it.rest=P.rest;})(it);}
 /* ---------- My plan (custom builder) ---------- */
 function grpName(g,l){var x=LIB.filter(function(y){return y.g===g;})[0];return x?x[l]:g;}
 function regCustom(id){var c=st.customEx[id];EX[id]={en:c.name,ar:c.name,eq:'custom',reg:'',cue:'',img:'',g:c.g,rest:90,alts:[]};}
